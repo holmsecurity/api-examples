@@ -73,7 +73,7 @@ The Web scan requires similar payload with two differences:
 - Instead of array of `included_assets`, we send `webapp_asset_uuid`, which is the target for the Web application scan. The list of available assets can be accessed [here](https://se-api.holmsecurity.com/docs/#operation/web-scans_assets_list)
 - we use different (Web specific) [scan profile](https://se-api.holmsecurity.com/docs/#operation/web-scans_scan-profiles_list)
 
-[webapp_scan.json](examples/webapp_scan.json])
+[webapp_scan.json](examples/webapp_scan.json)
 ```
 $  http POST https://se-api.holmsecurity.com/v1/web-scans "Authorization:Token {token}" @examples/webapp_scan.json
 HTTP/1.1 201 Created
