@@ -5,7 +5,7 @@ import dateutil.parser
 import pytz
 from requests.exceptions import MissingSchema
 import argparse
-from utils import get_api_data, filter_api_data_on_time_period, get_data_as_list
+from utils import get_data_from_api, filter_scans_on_time_period, get_data_as_list, get_scan_results
 
 """
 This file gives some examples/use cases of how to use the JSON REST API provided by HOLM SECURITY.
@@ -31,47 +31,51 @@ Parameters:
     result_limit (int): Limit of max nr of scan results to grab. (default: 10)
     api_key: API key of the SC account
     api_endpoint: API endpoint DC: e.g se-api or my-api (default: se-api)
+    severity: Severity level for filtering scan result vulnerabilities
     
 Returns:
     JSON data in a list
 """
 
 
-def get_scans(scan_type, time_period, results_limit, api_key, api_endpoint):
+def get_scans(scan_type, time_period, results_limit, api_key, api_endpoint, severity):
     if scan_type == "web_scan":
         api_url = f"{api_endpoint}/web-scans"
     else:
         api_url = f"{api_endpoint}/net-scans"
     offset = 0
     num_of_items = 0
-    response = get_api_data(api_url, api_key, offset)
-    results = []
+    response = get_data_from_api(api_url, api_key, offset)
+    scans = []
+    scan_results = []
     if response.status_code == 200:
         content = response.json()
         while content['next']:
-            filtered_data = filter_api_data_on_time_period(content, time_period)
+            filtered_data = filter_scans_on_time_period(content, time_period)
             if len(filtered_data) > 0:
-                get_data_as_list(filtered_data, results)
-            if len(results) > 0:
-                num_of_items = len(results)
+                scans = get_data_as_list(filtered_data)
+                scan_results = get_scan_results(scans, api_url, api_key, severity)
+            if len(scans) > 0:
+                num_of_items = len(scans)
             if num_of_items >= results_limit:
                 if num_of_items > results_limit:
-                    results = results[-results_limit:]
-                return pprint(results)
+                    scans = scans[-results_limit:]
+                return pprint(scans), pprint(scan_results)
             try:
                 offset += 10
-                response = get_api_data(api_url, api_key, offset)
+                response = get_data_from_api(api_url, api_key, offset)
                 content = response.json()
             except MissingSchema:
                 break
-        filtered_data = filter_api_data_on_time_period(content, time_period)
-        get_data_as_list(filtered_data, results)
+        filtered_data = filter_scans_on_time_period(content, time_period)
+        scans = get_data_as_list(filtered_data)
+        scan_results = get_scan_results(scans, api_url, api_key, severity)
+
         if len(filtered_data) > 0:
-            num_of_items = len(results)
+            num_of_items = len(scans)
             if num_of_items >= results_limit:
-                results = results[-results_limit:]
-                return pprint(results)
-        return pprint(results)
+                scans = scans[-results_limit:]
+        return pprint(scans), pprint(scan_results)
     else:
         return pprint(response.content)
 
@@ -113,8 +117,9 @@ hours and limit the result to be the two latest scans. Output to expect should l
                      'uuid': '2750ee89-2e35-49e9-af7e-e02f628f03d3'}],
   'uuid': '8f56d1bc-0c6f-4902-92f2-ca82e49b9024',
   'vulnerabilities_count': 41}]
-
-
+  
+  Following this data will be the results of each scan, this data can be quite extensive and will therefore
+  not be exemplified.
 """
 
 parser = argparse.ArgumentParser()
@@ -127,19 +132,31 @@ parser.add_argument("--limit", "-l", help="result limit, eg. maximum number of s
                     type=int, default=10)
 parser.add_argument("--type", "-tp", help="scan type to run, eg. net_scan or web_scan, default net_scan",
                     default="net_scan")
+parser.add_argument("--severity", "-s", help="severity level for filtering scan result vulnerabilities. For multiple "
+                                             "severities please provide a list as such: 'high, medium' !Note the space!"
+                                             "(default: 'high')",
+                    default="high")
 args = parser.parse_args()
 
-if args.type == 'net_scan':
+if args.type == 'web_scan':
+    pprint("--------------------------------------------------------------------")
+    pprint("--------------------------------------------------------------------")
+    pprint("---------------------GET WEB SCANS----------------------------------")
+    pprint("--------------------------------------------------------------------")
+    pprint("--------------------------------------------------------------------")
+
+else:
     pprint("--------------------------------------------------------------------")
     pprint("--------------------------------------------------------------------")
     pprint("---------------------GET NET SCANS----------------------------------")
     pprint("--------------------------------------------------------------------")
     pprint("--------------------------------------------------------------------")
 
-    get_scans = get_scans(
-        scan_type=args.type,
-        time_period=args.time,
-        results_limit=args.limit,
-        api_key=args.key,
-        api_endpoint=args.api,
-    )
+get_scans = get_scans(
+    scan_type=args.type,
+    time_period=args.time,
+    results_limit=args.limit,
+    api_key=args.key,
+    api_endpoint=args.api,
+    severity=args.severity.split()
+)
