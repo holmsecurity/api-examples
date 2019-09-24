@@ -85,7 +85,21 @@ HTTP/1.1 201 Created
 
 ### API example file
 
-An [example file](https://github.com/holmsecurity/api-examples/blob/master/api-examples.py) has been composed which servers to exemplify how the API can be used.
+An [example file](https://github.com/holmsecurity/api-examples/blob/master/get_scan_results.py) has been composed which servers to exemplify how the API can be used.
+
+The following external python libraries are used in the example file:
+
+| Library  | Usage |
+| ------------- | ------------- |
+| datetime  | to get datetime object |
+| requests | to make http requests    |
+| pprint | simply to print prettier  |
+| dateutil | to parse datetime objects |
+| pytz | to get the right string formatting |
+| requests.exceptions import MissingSchema | to raise the right exception |
+| argparse | to parse arguments from STDIN |
+
+
 
  The example script is used simply by running the python code with python3 interpreter and takes input arguments from CLI.
  The output will be printed to STDOUT. There are two different scans that can be run using the example script with flag "--type" or "-tp"
