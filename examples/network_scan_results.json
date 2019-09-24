@@ -1,0 +1,1414 @@
+[{'finished_date': '2019-09-16T08:18:47Z',
+  'name': 'Olof testing #2',
+  'progress_percent': 0,
+  'started_date': '2019-09-16T08:08:07Z',
+  'status': 'completed',
+  'target_assets': [{'name': 'DVWA',
+                     'type': 'host',
+                     'uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e'}],
+  'uuid': '34765cc4-e62d-4dec-9682-22848f2a1d96',
+  'vulnerabilities_count': 91},
+ {'finished_date': '2019-09-16T08:28:55Z',
+  'name': 'Olof testing #2',
+  'progress_percent': 0,
+  'started_date': '2019-09-16T08:18:57Z',
+  'status': 'completed',
+  'target_assets': [{'name': 'DVWA',
+                     'type': 'host',
+                     'uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e'}],
+  'uuid': 'fa0cbdbc-ab20-402b-a4ad-5e6b6c97955e',
+  'vulnerabilities_count': 91},
+ {'finished_date': '2019-09-16T14:24:24Z',
+  'name': 'William test schedule',
+  'progress_percent': 0,
+  'started_date': '2019-09-16T13:55:09Z',
+  'status': 'completed',
+  'target_assets': [{'name': 'nosql',
+                     'type': 'host',
+                     'uuid': '2750ee89-2e35-49e9-af7e-e02f628f03d3'}],
+  'uuid': '8f56d1bc-0c6f-4902-92f2-ca82e49b9024',
+  'vulnerabilities_count': 41},
+ {'finished_date': '2019-09-23T14:18:39Z',
+  'name': 'William test schedule',
+  'progress_percent': 0,
+  'started_date': '2019-09-23T13:55:12Z',
+  'status': 'completed',
+  'target_assets': [{'name': 'nosql',
+                     'type': 'host',
+                     'uuid': '2750ee89-2e35-49e9-af7e-e02f628f03d3'}],
+  'uuid': 'a8246453-396e-409f-9da4-013b1f1a1c54',
+  'vulnerabilities_count': 43}]
+[[[{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [99569],
+    'cve_ids': ['CVE-2017-9788'],
+    'cvss_base': 6.4,
+    'detection_information': 'Installed version: 2.4.10\n'
+                             'Fixed version:     2.4.27',
+    'hid': 'HID-2-1-045794',
+    'modified': '2019-03-14T10:56:52Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2017-07-17T12:03:56Z',
+    'severity': 'high',
+    'software': 'Apache HTTP Server 2.2.x before 2.2.34 and[newline]  2.4.x '
+                'before 2.4.27 on Linux.',
+    'solution': 'Upgrade to Apache HTTP Server 2.2.34 or 2.4.27[newline]  or '
+                'later.',
+    'vendor_reference': 'URL:http://www.securitytracker.com/id/1038906, '
+                        'URL:http://httpd.apache.org/security/vulnerabilities_22.html, '
+                        'URL:http://httpd.apache.org/security/vulnerabilities_24.html',
+    'vulnerability_category': 'Web Servers',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow '
+                            'remote[newline]  attackers to cause the target '
+                            'service to crash. A remote user can '
+                            'obtain[newline]  potentially sensitive '
+                            'information as well on the target system.',
+    'vulnerability_name': "Apache HTTP Server 'mod_auth_digest' Multiple "
+                          'Vulnerabilities (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [99569],
+    'cve_ids': ['CVE-2017-9788'],
+    'cvss_base': 6.4,
+    'detection_information': 'Installed version: 2.4.10\n'
+                             'Fixed version:     2.4.27',
+    'hid': 'HID-2-1-045794',
+    'modified': '2019-03-14T10:56:52Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2017-07-17T12:03:56Z',
+    'severity': 'high',
+    'software': 'Apache HTTP Server 2.2.x before 2.2.34 and[newline]  2.4.x '
+                'before 2.4.27 on Linux.',
+    'solution': 'Upgrade to Apache HTTP Server 2.2.34 or 2.4.27[newline]  or '
+                'later.',
+    'vendor_reference': 'URL:http://www.securitytracker.com/id/1038906, '
+                        'URL:http://httpd.apache.org/security/vulnerabilities_22.html, '
+                        'URL:http://httpd.apache.org/security/vulnerabilities_24.html',
+    'vulnerability_category': 'Web Servers',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow '
+                            'remote[newline]  attackers to cause the target '
+                            'service to crash. A remote user can '
+                            'obtain[newline]  potentially sensitive '
+                            'information as well on the target system.',
+    'vulnerability_name': "Apache HTTP Server 'mod_auth_digest' Multiple "
+                          'Vulnerabilities (Linux)'}],
+  [{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [91816],
+    'cve_ids': ['CVE-2016-5387'],
+    'cvss_base': 5.1,
+    'detection_information': 'Installed version: 2.4.10\n'
+                             'Fixed version:     2.4.24',
+    'hid': 'HID-2-1-032199',
+    'modified': '2019-07-05T09:54:18Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2016-07-26T13:10:57Z',
+    'severity': 'high',
+    'software': 'Apache HTTP Server through 2.4.23 on Linux[newline][newline]  '
+                '- ---[newline]  NOTE: Apache HTTP Server 2.2.32 is not '
+                'vulnerable[newline][newline]  - ---',
+    'solution': 'Upgrade to version 2.4.24, or 2.2.32, or newer.',
+    'vendor_reference': 'URL:https://www.apache.org/security/asf-httpoxy-response.txt',
+    'vulnerability_category': 'Web Servers',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow '
+                            'remote[newline]  attackers to redirect an '
+                            "application's outbound HTTP traffic to an "
+                            'arbitrary[newline]  proxy server via a crafted '
+                            'proxy header in an HTTP request.',
+    'vulnerability_name': 'Apache HTTP Server Man-in-the-Middle attack '
+                          'Vulnerability - July16 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [91816],
+    'cve_ids': ['CVE-2016-5387'],
+    'cvss_base': 5.1,
+    'detection_information': 'Installed version: 2.4.10\n'
+                             'Fixed version:     2.4.24',
+    'hid': 'HID-2-1-032199',
+    'modified': '2019-07-05T09:54:18Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2016-07-26T13:10:57Z',
+    'severity': 'high',
+    'software': 'Apache HTTP Server through 2.4.23 on Linux[newline][newline]  '
+                '- ---[newline]  NOTE: Apache HTTP Server 2.2.32 is not '
+                'vulnerable[newline][newline]  - ---',
+    'solution': 'Upgrade to version 2.4.24, or 2.2.32, or newer.',
+    'vendor_reference': 'URL:https://www.apache.org/security/asf-httpoxy-response.txt',
+    'vulnerability_category': 'Web Servers',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow '
+                            'remote[newline]  attackers to redirect an '
+                            "application's outbound HTTP traffic to an "
+                            'arbitrary[newline]  proxy server via a crafted '
+                            'proxy header in an HTTP request.',
+    'vulnerability_name': 'Apache HTTP Server Man-in-the-Middle attack '
+                          'Vulnerability - July16 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [103512, 103515, 103520, 103524, 103525],
+    'cve_ids': ['CVE-2017-15710', 'CVE-2017-15715'],
+    'cvss_base': 6.8,
+    'detection_information': 'Installed version: 2.4.10\n'
+                             'Fixed version:     2.4.30\n'
+                             'Installation\n'
+                             'path / port:       443/tcp',
+    'hid': 'HID-2-1-046301',
+    'modified': '2019-05-03T08:55:39Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2018-04-04T09:39:39Z',
+    'severity': 'high',
+    'software': 'Apache HTTP server versions from 2.4.1 to[newline]  2.4.4, '
+                '2.4.6, 2.4.7, 2.4.9, 2.4.10, 2.4.12, 2.4.16 to 2.4.18, '
+                '2.4.20, 2.4.23,[newline]  2.4.25 to 2.4.29 on Linux.',
+    'solution': 'Upgrade to version 2.4.30 or later. Please see the references '
+                'for more information.',
+    'vendor_reference': 'URL:https://httpd.apache.org/download.cgi, '
+                        'URL:https://httpd.apache.org/security/vulnerabilities_24.html',
+    'vulnerability_category': 'Web Servers',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow an '
+                            'attacker[newline]  to replay HTTP requests across '
+                            'servers without detection, influence the '
+                            'user[newline]  content, upload a malicious file, '
+                            'crash the Apache HTTP Server and '
+                            'perform[newline]  denial of service attack.',
+    'vulnerability_name': 'Apache HTTP Server Multiple Vulnerabilities Apr18 '
+                          '(Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [103512, 103515, 103520, 103524, 103525],
+    'cve_ids': ['CVE-2017-15710', 'CVE-2017-15715'],
+    'cvss_base': 6.8,
+    'detection_information': 'Installed version: 2.4.10\n'
+                             'Fixed version:     2.4.30\n'
+                             'Installation\n'
+                             'path / port:       80/tcp',
+    'hid': 'HID-2-1-046301',
+    'modified': '2019-05-03T08:55:39Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2018-04-04T09:39:39Z',
+    'severity': 'high',
+    'software': 'Apache HTTP server versions from 2.4.1 to[newline]  2.4.4, '
+                '2.4.6, 2.4.7, 2.4.9, 2.4.10, 2.4.12, 2.4.16 to 2.4.18, '
+                '2.4.20, 2.4.23,[newline]  2.4.25 to 2.4.29 on Linux.',
+    'solution': 'Upgrade to version 2.4.30 or later. Please see the references '
+                'for more information.',
+    'vendor_reference': 'URL:https://httpd.apache.org/download.cgi, '
+                        'URL:https://httpd.apache.org/security/vulnerabilities_24.html',
+    'vulnerability_category': 'Web Servers',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow an '
+                            'attacker[newline]  to replay HTTP requests across '
+                            'servers without detection, influence the '
+                            'user[newline]  content, upload a malicious file, '
+                            'crash the Apache HTTP Server and '
+                            'perform[newline]  denial of service attack.',
+    'vulnerability_name': 'Apache HTTP Server Multiple Vulnerabilities Apr18 '
+                          '(Linux)'}],
+  [{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [99134, 99135],
+    'cve_ids': ['CVE-2017-3167', 'CVE-2017-3169', 'CVE-2017-7679'],
+    'cvss_base': 7.5,
+    'detection_information': 'Installed version: 2.4.10\n'
+                             'Fixed version:     2.4.26',
+    'hid': 'HID-2-1-045771',
+    'modified': '2019-07-05T10:41:31Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2017-06-21T11:55:22Z',
+    'severity': 'high',
+    'software': 'Apache HTTP Server 2.2.x before 2.2.33 and[newline]  2.4.x '
+                'before 2.4.26 on Linux.',
+    'solution': 'Upgrade to Apache HTTP Server 2.2.33 or 2.4.26[newline]  or '
+                'later.',
+    'vendor_reference': 'URL:http://seclists.org/oss-sec/2017/q2/509, '
+                        'URL:http://httpd.apache.org/security/vulnerabilities_24.html, '
+                        'URL:http://httpd.apache.org/security/vulnerabilities_22.html',
+    'vulnerability_category': 'Web Servers',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow '
+                            'remote[newline]  attackers to bypass '
+                            'authentication and perform unauthorized actions, '
+                            'cause[newline]  a denial-of-service condition and '
+                            'gain access to potentially sensitive[newline]  '
+                            'information.',
+    'vulnerability_name': 'Apache HTTP Server Multiple Vulnerabilities June17 '
+                          '(Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [99134, 99135],
+    'cve_ids': ['CVE-2017-3167', 'CVE-2017-3169', 'CVE-2017-7679'],
+    'cvss_base': 7.5,
+    'detection_information': 'Installed version: 2.4.10\n'
+                             'Fixed version:     2.4.26',
+    'hid': 'HID-2-1-045771',
+    'modified': '2019-07-05T10:41:31Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2017-06-21T11:55:22Z',
+    'severity': 'high',
+    'software': 'Apache HTTP Server 2.2.x before 2.2.33 and[newline]  2.4.x '
+                'before 2.4.26 on Linux.',
+    'solution': 'Upgrade to Apache HTTP Server 2.2.33 or 2.4.26[newline]  or '
+                'later.',
+    'vendor_reference': 'URL:http://seclists.org/oss-sec/2017/q2/509, '
+                        'URL:http://httpd.apache.org/security/vulnerabilities_24.html, '
+                        'URL:http://httpd.apache.org/security/vulnerabilities_22.html',
+    'vulnerability_category': 'Web Servers',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow '
+                            'remote[newline]  attackers to bypass '
+                            'authentication and perform unauthorized actions, '
+                            'cause[newline]  a denial-of-service condition and '
+                            'gain access to potentially sensitive[newline]  '
+                            'information.',
+    'vulnerability_name': 'Apache HTTP Server Multiple Vulnerabilities June17 '
+                          '(Linux)'}],
+  [{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': ['CVE-2015-9253'],
+    'cvss_base': 6.8,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     7.1.20\n'
+                             'Installation\n'
+                             'path / port:       443/tcp',
+    'hid': 'HID-2-1-046087',
+    'modified': '2018-12-11T15:47:20Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2018-02-20T12:32:59Z',
+    'severity': 'high',
+    'software': 'PHP versions 5.x up to and including 5.6.36. All 7.0.x '
+                'versions,[newline]  7.1.x before 7.1.20, 7.2.x before 7.2.8 '
+                'and 7.3.x before 7.3.0alpha3 on Windows.',
+    'solution': 'Update to PHP 7.1.20, 7.2.8 or 7.3.0alpha3.',
+    'vendor_reference': 'URL:https://bugs.php.net/bug.php?id=73342, '
+                        'URL:https://bugs.php.net/bug.php?id=70185, '
+                        'URL:https://github.com/php/php-src/pull/3287, '
+                        'URL:https://www.futureweb.at/security/CVE-2015-9253, '
+                        'URL:https://vuldb.com//?id.113566',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successfully exploitation will allow an[newline]  '
+                            'attackers to consume 100% of the CPU, and consume '
+                            'disk space with a large[newline]  volume of error '
+                            'logs, as demonstrated by an attack by a customer '
+                            'of a[newline]  shared-hosting facility.',
+    'vulnerability_name': "PHP 'PHP-FPM' Denial of Service Vulnerability "
+                          '(Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': ['CVE-2015-9253'],
+    'cvss_base': 6.8,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     7.1.20\n'
+                             'Installation\n'
+                             'path / port:       80/tcp',
+    'hid': 'HID-2-1-046087',
+    'modified': '2018-12-11T15:47:20Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2018-02-20T12:32:59Z',
+    'severity': 'high',
+    'software': 'PHP versions 5.x up to and including 5.6.36. All 7.0.x '
+                'versions,[newline]  7.1.x before 7.1.20, 7.2.x before 7.2.8 '
+                'and 7.3.x before 7.3.0alpha3 on Windows.',
+    'solution': 'Update to PHP 7.1.20, 7.2.8 or 7.3.0alpha3.',
+    'vendor_reference': 'URL:https://bugs.php.net/bug.php?id=73342, '
+                        'URL:https://bugs.php.net/bug.php?id=70185, '
+                        'URL:https://github.com/php/php-src/pull/3287, '
+                        'URL:https://www.futureweb.at/security/CVE-2015-9253, '
+                        'URL:https://vuldb.com//?id.113566',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successfully exploitation will allow an[newline]  '
+                            'attackers to consume 100% of the CPU, and consume '
+                            'disk space with a large[newline]  volume of error '
+                            'logs, as demonstrated by an attack by a customer '
+                            'of a[newline]  shared-hosting facility.',
+    'vulnerability_name': "PHP 'PHP-FPM' Denial of Service Vulnerability "
+                          '(Linux)'}],
+  [{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': ['CVE-2017-11142'],
+    'cvss_base': 7.8,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     5.6.31',
+    'hid': 'HID-2-1-045944',
+    'modified': '2018-10-12T11:28:04Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2017-07-13T12:18:21Z',
+    'severity': 'high',
+    'software': 'PHP versions before 5.6.31, 7.x before 7.0.17,[newline]  and '
+                '7.1.x before 7.1.3',
+    'solution': 'Upgrade to PHP version 5.6.31, 7.0.17,[newline]  7.1.3 or '
+                'later.',
+    'vendor_reference': 'URL:http://www.php.net/ChangeLog-5.php, '
+                        'URL:http://www.php.net/ChangeLog-7.php',
+    'vulnerability_category': 'Denial of Service',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successfully exploiting this issue '
+                            'allow[newline]  an attacker to cause a CPU '
+                            'consumption denial of service attack.',
+    'vulnerability_name': 'PHP Denial of Service Vulnerability Jul17 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': ['CVE-2017-11142'],
+    'cvss_base': 7.8,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     5.6.31',
+    'hid': 'HID-2-1-045944',
+    'modified': '2018-10-12T11:28:04Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2017-07-13T12:18:21Z',
+    'severity': 'high',
+    'software': 'PHP versions before 5.6.31, 7.x before 7.0.17,[newline]  and '
+                '7.1.x before 7.1.3',
+    'solution': 'Upgrade to PHP version 5.6.31, 7.0.17,[newline]  7.1.3 or '
+                'later.',
+    'vendor_reference': 'URL:http://www.php.net/ChangeLog-5.php, '
+                        'URL:http://www.php.net/ChangeLog-7.php',
+    'vulnerability_category': 'Denial of Service',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successfully exploiting this issue '
+                            'allow[newline]  an attacker to cause a CPU '
+                            'consumption denial of service attack.',
+    'vulnerability_name': 'PHP Denial of Service Vulnerability Jul17 (Linux)'}],
+  [{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': [],
+    'cvss_base': 7.5,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     5.6.40\n'
+                             'Installation\n'
+                             'path / port:       443/tcp',
+    'hid': 'HID-2-1-376505',
+    'modified': '2019-02-26T03:40:29Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2019-02-26T03:29:33Z',
+    'severity': 'high',
+    'software': 'PHP versions before 5.6.40, 7.x before 7.1.26, 7.2.x before '
+                '7.2.14 and[newline]7.3.x before 7.3.1.',
+    'solution': 'Update to version 5.6.40, 7.1.16, 7.2.14, 7.3.1 or later.',
+    'vendor_reference': 'URL:https://bugs.php.net/bug.php?id=77242, '
+                        'URL:https://bugs.php.net/bug.php?id=77249, '
+                        'URL:https://bugs.php.net/bug.php?id=77247, '
+                        'URL:https://bugs.php.net/bug.php?id=77370, '
+                        'URL:https://bugs.php.net/bug.php?id=77371, '
+                        'URL:https://bugs.php.net/bug.php?id=77381, '
+                        'URL:https://bugs.php.net/bug.php?id=77382, '
+                        'URL:https://bugs.php.net/bug.php?id=77385, '
+                        'URL:https://bugs.php.net/bug.php?id=77394, '
+                        'URL:https://bugs.php.net/bug.php?id=77418, '
+                        'URL:https://bugs.php.net/bug.php?id=77380',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'not specified',
+    'vulnerability_name': 'PHP Multiple Vulnerabilities - Feb19 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': [],
+    'cvss_base': 7.5,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     5.6.40\n'
+                             'Installation\n'
+                             'path / port:       80/tcp',
+    'hid': 'HID-2-1-376505',
+    'modified': '2019-02-26T03:40:29Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2019-02-26T03:29:33Z',
+    'severity': 'high',
+    'software': 'PHP versions before 5.6.40, 7.x before 7.1.26, 7.2.x before '
+                '7.2.14 and[newline]7.3.x before 7.3.1.',
+    'solution': 'Update to version 5.6.40, 7.1.16, 7.2.14, 7.3.1 or later.',
+    'vendor_reference': 'URL:https://bugs.php.net/bug.php?id=77242, '
+                        'URL:https://bugs.php.net/bug.php?id=77249, '
+                        'URL:https://bugs.php.net/bug.php?id=77247, '
+                        'URL:https://bugs.php.net/bug.php?id=77370, '
+                        'URL:https://bugs.php.net/bug.php?id=77371, '
+                        'URL:https://bugs.php.net/bug.php?id=77381, '
+                        'URL:https://bugs.php.net/bug.php?id=77382, '
+                        'URL:https://bugs.php.net/bug.php?id=77385, '
+                        'URL:https://bugs.php.net/bug.php?id=77394, '
+                        'URL:https://bugs.php.net/bug.php?id=77418, '
+                        'URL:https://bugs.php.net/bug.php?id=77380',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'not specified',
+    'vulnerability_name': 'PHP Multiple Vulnerabilities - Feb19 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': [],
+    'cvss_base': 6.8,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     5.6.36\n'
+                             'Installation\n'
+                             'path / port:       443/tcp',
+    'hid': 'HID-2-1-047627',
+    'modified': '2019-05-03T08:55:39Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2018-05-02T12:32:28Z',
+    'severity': 'high',
+    'software': 'PHP versions prior to 5.6.36,[newline][newline]  PHP versions '
+                '7.2.x prior to 7.2.5,[newline][newline]  PHP versions 7.0.x '
+                'prior to 7.0.30,[newline][newline]  PHP versions 7.1.x prior '
+                'to 7.1.17 on Linux.',
+    'solution': 'Upgrade to version 7.2.5 or 7.0.30 or[newline]  5.6.36 or '
+                '7.1.17 or later. Please see the references for more '
+                'information.',
+    'vendor_reference': 'URL:http://www.php.net/ChangeLog-5.php#5.6.36, '
+                        'URL:http://www.php.net/ChangeLog-7.php#7.0.30, '
+                        'URL:http://www.php.net/ChangeLog-7.php#7.1.17, '
+                        'URL:http://www.php.net/ChangeLog-7.php#7.2.5',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow an '
+                            'attacker[newline]  to conduct XSS attacks, crash '
+                            'PHP, conduct denial-of-service condition '
+                            'and[newline]  execute arbitrary code in the '
+                            'context of the affected application.',
+    'vulnerability_name': 'PHP Multiple Vulnerabilities May18 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': [],
+    'cvss_base': 6.8,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     5.6.36\n'
+                             'Installation\n'
+                             'path / port:       80/tcp',
+    'hid': 'HID-2-1-047627',
+    'modified': '2019-05-03T08:55:39Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2018-05-02T12:32:28Z',
+    'severity': 'high',
+    'software': 'PHP versions prior to 5.6.36,[newline][newline]  PHP versions '
+                '7.2.x prior to 7.2.5,[newline][newline]  PHP versions 7.0.x '
+                'prior to 7.0.30,[newline][newline]  PHP versions 7.1.x prior '
+                'to 7.1.17 on Linux.',
+    'solution': 'Upgrade to version 7.2.5 or 7.0.30 or[newline]  5.6.36 or '
+                '7.1.17 or later. Please see the references for more '
+                'information.',
+    'vendor_reference': 'URL:http://www.php.net/ChangeLog-5.php#5.6.36, '
+                        'URL:http://www.php.net/ChangeLog-7.php#7.0.30, '
+                        'URL:http://www.php.net/ChangeLog-7.php#7.1.17, '
+                        'URL:http://www.php.net/ChangeLog-7.php#7.2.5',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow an '
+                            'attacker[newline]  to conduct XSS attacks, crash '
+                            'PHP, conduct denial-of-service condition '
+                            'and[newline]  execute arbitrary code in the '
+                            'context of the affected application.',
+    'vulnerability_name': 'PHP Multiple Vulnerabilities May18 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [103204],
+    'cve_ids': [],
+    'cvss_base': 7.5,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     5.6.34\n'
+                             'Installation\n'
+                             'path / port:       443/tcp',
+    'hid': 'HID-2-1-046388',
+    'modified': '2018-11-16T16:12:15Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2018-03-12T11:54:20Z',
+    'severity': 'high',
+    'software': 'PHP versions 7.2.x prior to 7.2.3,[newline][newline]  PHP '
+                'versions 7.0.x prior to 7.0.28,[newline][newline]  PHP '
+                'versions 5.0.x prior to 5.6.34 and[newline][newline]  PHP '
+                'versions 7.1.x prior to 7.1.15 on Linux.',
+    'solution': 'Upgrade to version 7.2.3, 7.0.28,[newline]  5.6.34, 7.1.15 or '
+                'later.',
+    'vendor_reference': 'URL:http://php.net/ChangeLog-7.php, '
+                        'URL:https://bugs.php.net/bug.php?id=75981, '
+                        'URL:http://www.php.net',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow an '
+                            'attacker[newline]  to execute arbitrary code in '
+                            'the context of the affected application. '
+                            'Failed[newline]  exploit attempts will result in '
+                            'denial-of-service conditions.',
+    'vulnerability_name': 'PHP Stack Buffer Overflow Vulnerability Mar18 '
+                          '(Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [103204],
+    'cve_ids': [],
+    'cvss_base': 7.5,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     5.6.34\n'
+                             'Installation\n'
+                             'path / port:       80/tcp',
+    'hid': 'HID-2-1-046388',
+    'modified': '2018-11-16T16:12:15Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2018-03-12T11:54:20Z',
+    'severity': 'high',
+    'software': 'PHP versions 7.2.x prior to 7.2.3,[newline][newline]  PHP '
+                'versions 7.0.x prior to 7.0.28,[newline][newline]  PHP '
+                'versions 5.0.x prior to 5.6.34 and[newline][newline]  PHP '
+                'versions 7.1.x prior to 7.1.15 on Linux.',
+    'solution': 'Upgrade to version 7.2.3, 7.0.28,[newline]  5.6.34, 7.1.15 or '
+                'later.',
+    'vendor_reference': 'URL:http://php.net/ChangeLog-7.php, '
+                        'URL:https://bugs.php.net/bug.php?id=75981, '
+                        'URL:http://www.php.net',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow an '
+                            'attacker[newline]  to execute arbitrary code in '
+                            'the context of the affected application. '
+                            'Failed[newline]  exploit attempts will result in '
+                            'denial-of-service conditions.',
+    'vulnerability_name': 'PHP Stack Buffer Overflow Vulnerability Mar18 '
+                          '(Linux)'}],
+  [{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': [],
+    'cvss_base': 7.5,
+    'detection_information': 'The following files are calling the function '
+                             'phpinfo() which disclose potentially sensitive '
+                             'information to the remote attacker:\n'
+                             '\n'
+                             'https://194.132.49.155/dvwa/phpinfo.php\n'
+                             'https://194.132.49.155/dvwa/test.php',
+    'hid': 'HID-2-1-34675',
+    'modified': '2017-06-16T08:59:27Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2005-11-03T13:08:04Z',
+    'severity': 'high',
+    'software': 'not specified',
+    'solution': 'Delete them or restrict access to the listened files.',
+    'vendor_reference': 'none',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Some of the information that can be gathered from '
+                            'this file includes:[newline][newline]  The '
+                            'username of the user who installed php, if they '
+                            'are a SUDO user, the IP address of the host, the '
+                            'web server [newline]  version, the system '
+                            'version(unix / linux), and the root directory of '
+                            'the web server.',
+    'vulnerability_name': 'phpinfo() output accessible'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': [],
+    'cvss_base': 7.5,
+    'detection_information': 'The following files are calling the function '
+                             'phpinfo() which disclose potentially sensitive '
+                             'information to the remote attacker:\n'
+                             '\n'
+                             'http://194.132.49.155/dvwa/phpinfo.php\n'
+                             'http://194.132.49.155/dvwa/test.php',
+    'hid': 'HID-2-1-34675',
+    'modified': '2017-06-16T08:59:27Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2005-11-03T13:08:04Z',
+    'severity': 'high',
+    'software': 'not specified',
+    'solution': 'Delete them or restrict access to the listened files.',
+    'vendor_reference': 'none',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Some of the information that can be gathered from '
+                            'this file includes:[newline][newline]  The '
+                            'username of the user who installed php, if they '
+                            'are a SUDO user, the IP address of the host, the '
+                            'web server [newline]  version, the system '
+                            'version(unix / linux), and the root directory of '
+                            'the web server.',
+    'vulnerability_name': 'phpinfo() output accessible'}],
+  [{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [106220],
+    'cve_ids': [],
+    'cvss_base': 7.5,
+    'detection_information': 'Installed version: 5.0\n'
+                             'Fixed version:     5.0.1\n'
+                             'Installation\n'
+                             'path / port:       /wordpress',
+    'hid': 'HID-2-1-346923',
+    'modified': '2019-05-17T10:45:27Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2018-12-17T13:16:22Z',
+    'severity': 'high',
+    'software': 'All versions since WordPress 3.7 up to 5.0.',
+    'solution': 'The issues have been fixed in version 5.0.1.[newline]  '
+                'Updated versions of WordPress 4.9 and older releases are also '
+                'available.[newline][newline]  Please see the references for '
+                'more information.',
+    'vendor_reference': 'URL:https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/, '
+                        'URL:https://wordpress.org/download/releases/',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'not specified',
+    'vulnerability_name': 'WordPress Multiple Vulnerabilities (Security '
+                          'Release) - December 2018 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [107088],
+    'cve_ids': [],
+    'cvss_base': 6.5,
+    'detection_information': 'Installed version: 5.0\n'
+                             'Fixed version:     5.0.1\n'
+                             'Installation\n'
+                             'path / port:       /wordpress',
+    'hid': 'HID-2-1-376586',
+    'modified': '2019-05-17T10:45:27Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2019-02-22T06:59:06Z',
+    'severity': 'high',
+    'software': 'WordPress prior version 4.9.9 and 5.0.1.',
+    'solution': 'Update to version 4.9.9, 5.0.1 or later.',
+    'vendor_reference': 'URL:https://blog.ripstech.com/2019/wordpress-image-remote-code-execution/',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'not specified',
+    'vulnerability_name': 'WordPress RCE Vulnerability CVE-2019-8942 (Linux)'}],
+  [{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [106220],
+    'cve_ids': [],
+    'cvss_base': 7.5,
+    'detection_information': 'Installed version: 5.0\n'
+                             'Fixed version:     5.0.1\n'
+                             'Installation\n'
+                             'path / port:       /wordpress',
+    'hid': 'HID-2-1-346923',
+    'modified': '2019-05-17T10:45:27Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2018-12-17T13:16:22Z',
+    'severity': 'high',
+    'software': 'All versions since WordPress 3.7 up to 5.0.',
+    'solution': 'The issues have been fixed in version 5.0.1.[newline]  '
+                'Updated versions of WordPress 4.9 and older releases are also '
+                'available.[newline][newline]  Please see the references for '
+                'more information.',
+    'vendor_reference': 'URL:https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/, '
+                        'URL:https://wordpress.org/download/releases/',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'not specified',
+    'vulnerability_name': 'WordPress Multiple Vulnerabilities (Security '
+                          'Release) - December 2018 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [107088],
+    'cve_ids': [],
+    'cvss_base': 6.5,
+    'detection_information': 'Installed version: 5.0\n'
+                             'Fixed version:     5.0.1\n'
+                             'Installation\n'
+                             'path / port:       /wordpress',
+    'hid': 'HID-2-1-376586',
+    'modified': '2019-05-17T10:45:27Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2019-02-22T06:59:06Z',
+    'severity': 'high',
+    'software': 'WordPress prior version 4.9.9 and 5.0.1.',
+    'solution': 'Update to version 4.9.9, 5.0.1 or later.',
+    'vendor_reference': 'URL:https://blog.ripstech.com/2019/wordpress-image-remote-code-execution/',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'not specified',
+    'vulnerability_name': 'WordPress RCE Vulnerability CVE-2019-8942 '
+                          '(Linux)'}]],
+ [[{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [99569],
+    'cve_ids': ['CVE-2017-9788'],
+    'cvss_base': 6.4,
+    'detection_information': 'Installed version: 2.4.10\n'
+                             'Fixed version:     2.4.27',
+    'hid': 'HID-2-1-045794',
+    'modified': '2019-03-14T10:56:52Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2017-07-17T12:03:56Z',
+    'severity': 'high',
+    'software': 'Apache HTTP Server 2.2.x before 2.2.34 and[newline]  2.4.x '
+                'before 2.4.27 on Linux.',
+    'solution': 'Upgrade to Apache HTTP Server 2.2.34 or 2.4.27[newline]  or '
+                'later.',
+    'vendor_reference': 'URL:http://www.securitytracker.com/id/1038906, '
+                        'URL:http://httpd.apache.org/security/vulnerabilities_22.html, '
+                        'URL:http://httpd.apache.org/security/vulnerabilities_24.html',
+    'vulnerability_category': 'Web Servers',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow '
+                            'remote[newline]  attackers to cause the target '
+                            'service to crash. A remote user can '
+                            'obtain[newline]  potentially sensitive '
+                            'information as well on the target system.',
+    'vulnerability_name': "Apache HTTP Server 'mod_auth_digest' Multiple "
+                          'Vulnerabilities (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [99569],
+    'cve_ids': ['CVE-2017-9788'],
+    'cvss_base': 6.4,
+    'detection_information': 'Installed version: 2.4.10\n'
+                             'Fixed version:     2.4.27',
+    'hid': 'HID-2-1-045794',
+    'modified': '2019-03-14T10:56:52Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2017-07-17T12:03:56Z',
+    'severity': 'high',
+    'software': 'Apache HTTP Server 2.2.x before 2.2.34 and[newline]  2.4.x '
+                'before 2.4.27 on Linux.',
+    'solution': 'Upgrade to Apache HTTP Server 2.2.34 or 2.4.27[newline]  or '
+                'later.',
+    'vendor_reference': 'URL:http://www.securitytracker.com/id/1038906, '
+                        'URL:http://httpd.apache.org/security/vulnerabilities_22.html, '
+                        'URL:http://httpd.apache.org/security/vulnerabilities_24.html',
+    'vulnerability_category': 'Web Servers',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow '
+                            'remote[newline]  attackers to cause the target '
+                            'service to crash. A remote user can '
+                            'obtain[newline]  potentially sensitive '
+                            'information as well on the target system.',
+    'vulnerability_name': "Apache HTTP Server 'mod_auth_digest' Multiple "
+                          'Vulnerabilities (Linux)'}],
+  [{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [91816],
+    'cve_ids': ['CVE-2016-5387'],
+    'cvss_base': 5.1,
+    'detection_information': 'Installed version: 2.4.10\n'
+                             'Fixed version:     2.4.24',
+    'hid': 'HID-2-1-032199',
+    'modified': '2019-07-05T09:54:18Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2016-07-26T13:10:57Z',
+    'severity': 'high',
+    'software': 'Apache HTTP Server through 2.4.23 on Linux[newline][newline]  '
+                '- ---[newline]  NOTE: Apache HTTP Server 2.2.32 is not '
+                'vulnerable[newline][newline]  - ---',
+    'solution': 'Upgrade to version 2.4.24, or 2.2.32, or newer.',
+    'vendor_reference': 'URL:https://www.apache.org/security/asf-httpoxy-response.txt',
+    'vulnerability_category': 'Web Servers',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow '
+                            'remote[newline]  attackers to redirect an '
+                            "application's outbound HTTP traffic to an "
+                            'arbitrary[newline]  proxy server via a crafted '
+                            'proxy header in an HTTP request.',
+    'vulnerability_name': 'Apache HTTP Server Man-in-the-Middle attack '
+                          'Vulnerability - July16 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [91816],
+    'cve_ids': ['CVE-2016-5387'],
+    'cvss_base': 5.1,
+    'detection_information': 'Installed version: 2.4.10\n'
+                             'Fixed version:     2.4.24',
+    'hid': 'HID-2-1-032199',
+    'modified': '2019-07-05T09:54:18Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2016-07-26T13:10:57Z',
+    'severity': 'high',
+    'software': 'Apache HTTP Server through 2.4.23 on Linux[newline][newline]  '
+                '- ---[newline]  NOTE: Apache HTTP Server 2.2.32 is not '
+                'vulnerable[newline][newline]  - ---',
+    'solution': 'Upgrade to version 2.4.24, or 2.2.32, or newer.',
+    'vendor_reference': 'URL:https://www.apache.org/security/asf-httpoxy-response.txt',
+    'vulnerability_category': 'Web Servers',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow '
+                            'remote[newline]  attackers to redirect an '
+                            "application's outbound HTTP traffic to an "
+                            'arbitrary[newline]  proxy server via a crafted '
+                            'proxy header in an HTTP request.',
+    'vulnerability_name': 'Apache HTTP Server Man-in-the-Middle attack '
+                          'Vulnerability - July16 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [103512, 103515, 103520, 103524, 103525],
+    'cve_ids': ['CVE-2017-15710', 'CVE-2017-15715'],
+    'cvss_base': 6.8,
+    'detection_information': 'Installed version: 2.4.10\n'
+                             'Fixed version:     2.4.30\n'
+                             'Installation\n'
+                             'path / port:       443/tcp',
+    'hid': 'HID-2-1-046301',
+    'modified': '2019-05-03T08:55:39Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2018-04-04T09:39:39Z',
+    'severity': 'high',
+    'software': 'Apache HTTP server versions from 2.4.1 to[newline]  2.4.4, '
+                '2.4.6, 2.4.7, 2.4.9, 2.4.10, 2.4.12, 2.4.16 to 2.4.18, '
+                '2.4.20, 2.4.23,[newline]  2.4.25 to 2.4.29 on Linux.',
+    'solution': 'Upgrade to version 2.4.30 or later. Please see the references '
+                'for more information.',
+    'vendor_reference': 'URL:https://httpd.apache.org/download.cgi, '
+                        'URL:https://httpd.apache.org/security/vulnerabilities_24.html',
+    'vulnerability_category': 'Web Servers',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow an '
+                            'attacker[newline]  to replay HTTP requests across '
+                            'servers without detection, influence the '
+                            'user[newline]  content, upload a malicious file, '
+                            'crash the Apache HTTP Server and '
+                            'perform[newline]  denial of service attack.',
+    'vulnerability_name': 'Apache HTTP Server Multiple Vulnerabilities Apr18 '
+                          '(Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [103512, 103515, 103520, 103524, 103525],
+    'cve_ids': ['CVE-2017-15710', 'CVE-2017-15715'],
+    'cvss_base': 6.8,
+    'detection_information': 'Installed version: 2.4.10\n'
+                             'Fixed version:     2.4.30\n'
+                             'Installation\n'
+                             'path / port:       80/tcp',
+    'hid': 'HID-2-1-046301',
+    'modified': '2019-05-03T08:55:39Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2018-04-04T09:39:39Z',
+    'severity': 'high',
+    'software': 'Apache HTTP server versions from 2.4.1 to[newline]  2.4.4, '
+                '2.4.6, 2.4.7, 2.4.9, 2.4.10, 2.4.12, 2.4.16 to 2.4.18, '
+                '2.4.20, 2.4.23,[newline]  2.4.25 to 2.4.29 on Linux.',
+    'solution': 'Upgrade to version 2.4.30 or later. Please see the references '
+                'for more information.',
+    'vendor_reference': 'URL:https://httpd.apache.org/download.cgi, '
+                        'URL:https://httpd.apache.org/security/vulnerabilities_24.html',
+    'vulnerability_category': 'Web Servers',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow an '
+                            'attacker[newline]  to replay HTTP requests across '
+                            'servers without detection, influence the '
+                            'user[newline]  content, upload a malicious file, '
+                            'crash the Apache HTTP Server and '
+                            'perform[newline]  denial of service attack.',
+    'vulnerability_name': 'Apache HTTP Server Multiple Vulnerabilities Apr18 '
+                          '(Linux)'}],
+  [{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [99134, 99135],
+    'cve_ids': ['CVE-2017-3167', 'CVE-2017-3169', 'CVE-2017-7679'],
+    'cvss_base': 7.5,
+    'detection_information': 'Installed version: 2.4.10\n'
+                             'Fixed version:     2.4.26',
+    'hid': 'HID-2-1-045771',
+    'modified': '2019-07-05T10:41:31Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2017-06-21T11:55:22Z',
+    'severity': 'high',
+    'software': 'Apache HTTP Server 2.2.x before 2.2.33 and[newline]  2.4.x '
+                'before 2.4.26 on Linux.',
+    'solution': 'Upgrade to Apache HTTP Server 2.2.33 or 2.4.26[newline]  or '
+                'later.',
+    'vendor_reference': 'URL:http://seclists.org/oss-sec/2017/q2/509, '
+                        'URL:http://httpd.apache.org/security/vulnerabilities_24.html, '
+                        'URL:http://httpd.apache.org/security/vulnerabilities_22.html',
+    'vulnerability_category': 'Web Servers',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow '
+                            'remote[newline]  attackers to bypass '
+                            'authentication and perform unauthorized actions, '
+                            'cause[newline]  a denial-of-service condition and '
+                            'gain access to potentially sensitive[newline]  '
+                            'information.',
+    'vulnerability_name': 'Apache HTTP Server Multiple Vulnerabilities June17 '
+                          '(Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [99134, 99135],
+    'cve_ids': ['CVE-2017-3167', 'CVE-2017-3169', 'CVE-2017-7679'],
+    'cvss_base': 7.5,
+    'detection_information': 'Installed version: 2.4.10\n'
+                             'Fixed version:     2.4.26',
+    'hid': 'HID-2-1-045771',
+    'modified': '2019-07-05T10:41:31Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2017-06-21T11:55:22Z',
+    'severity': 'high',
+    'software': 'Apache HTTP Server 2.2.x before 2.2.33 and[newline]  2.4.x '
+                'before 2.4.26 on Linux.',
+    'solution': 'Upgrade to Apache HTTP Server 2.2.33 or 2.4.26[newline]  or '
+                'later.',
+    'vendor_reference': 'URL:http://seclists.org/oss-sec/2017/q2/509, '
+                        'URL:http://httpd.apache.org/security/vulnerabilities_24.html, '
+                        'URL:http://httpd.apache.org/security/vulnerabilities_22.html',
+    'vulnerability_category': 'Web Servers',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow '
+                            'remote[newline]  attackers to bypass '
+                            'authentication and perform unauthorized actions, '
+                            'cause[newline]  a denial-of-service condition and '
+                            'gain access to potentially sensitive[newline]  '
+                            'information.',
+    'vulnerability_name': 'Apache HTTP Server Multiple Vulnerabilities June17 '
+                          '(Linux)'}],
+  [{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': ['CVE-2015-9253'],
+    'cvss_base': 6.8,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     7.1.20\n'
+                             'Installation\n'
+                             'path / port:       443/tcp',
+    'hid': 'HID-2-1-046087',
+    'modified': '2018-12-11T15:47:20Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2018-02-20T12:32:59Z',
+    'severity': 'high',
+    'software': 'PHP versions 5.x up to and including 5.6.36. All 7.0.x '
+                'versions,[newline]  7.1.x before 7.1.20, 7.2.x before 7.2.8 '
+                'and 7.3.x before 7.3.0alpha3 on Windows.',
+    'solution': 'Update to PHP 7.1.20, 7.2.8 or 7.3.0alpha3.',
+    'vendor_reference': 'URL:https://bugs.php.net/bug.php?id=73342, '
+                        'URL:https://bugs.php.net/bug.php?id=70185, '
+                        'URL:https://github.com/php/php-src/pull/3287, '
+                        'URL:https://www.futureweb.at/security/CVE-2015-9253, '
+                        'URL:https://vuldb.com//?id.113566',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successfully exploitation will allow an[newline]  '
+                            'attackers to consume 100% of the CPU, and consume '
+                            'disk space with a large[newline]  volume of error '
+                            'logs, as demonstrated by an attack by a customer '
+                            'of a[newline]  shared-hosting facility.',
+    'vulnerability_name': "PHP 'PHP-FPM' Denial of Service Vulnerability "
+                          '(Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': ['CVE-2015-9253'],
+    'cvss_base': 6.8,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     7.1.20\n'
+                             'Installation\n'
+                             'path / port:       80/tcp',
+    'hid': 'HID-2-1-046087',
+    'modified': '2018-12-11T15:47:20Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2018-02-20T12:32:59Z',
+    'severity': 'high',
+    'software': 'PHP versions 5.x up to and including 5.6.36. All 7.0.x '
+                'versions,[newline]  7.1.x before 7.1.20, 7.2.x before 7.2.8 '
+                'and 7.3.x before 7.3.0alpha3 on Windows.',
+    'solution': 'Update to PHP 7.1.20, 7.2.8 or 7.3.0alpha3.',
+    'vendor_reference': 'URL:https://bugs.php.net/bug.php?id=73342, '
+                        'URL:https://bugs.php.net/bug.php?id=70185, '
+                        'URL:https://github.com/php/php-src/pull/3287, '
+                        'URL:https://www.futureweb.at/security/CVE-2015-9253, '
+                        'URL:https://vuldb.com//?id.113566',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successfully exploitation will allow an[newline]  '
+                            'attackers to consume 100% of the CPU, and consume '
+                            'disk space with a large[newline]  volume of error '
+                            'logs, as demonstrated by an attack by a customer '
+                            'of a[newline]  shared-hosting facility.',
+    'vulnerability_name': "PHP 'PHP-FPM' Denial of Service Vulnerability "
+                          '(Linux)'}],
+  [{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': ['CVE-2017-11142'],
+    'cvss_base': 7.8,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     5.6.31',
+    'hid': 'HID-2-1-045944',
+    'modified': '2018-10-12T11:28:04Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2017-07-13T12:18:21Z',
+    'severity': 'high',
+    'software': 'PHP versions before 5.6.31, 7.x before 7.0.17,[newline]  and '
+                '7.1.x before 7.1.3',
+    'solution': 'Upgrade to PHP version 5.6.31, 7.0.17,[newline]  7.1.3 or '
+                'later.',
+    'vendor_reference': 'URL:http://www.php.net/ChangeLog-5.php, '
+                        'URL:http://www.php.net/ChangeLog-7.php',
+    'vulnerability_category': 'Denial of Service',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successfully exploiting this issue '
+                            'allow[newline]  an attacker to cause a CPU '
+                            'consumption denial of service attack.',
+    'vulnerability_name': 'PHP Denial of Service Vulnerability Jul17 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': ['CVE-2017-11142'],
+    'cvss_base': 7.8,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     5.6.31',
+    'hid': 'HID-2-1-045944',
+    'modified': '2018-10-12T11:28:04Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2017-07-13T12:18:21Z',
+    'severity': 'high',
+    'software': 'PHP versions before 5.6.31, 7.x before 7.0.17,[newline]  and '
+                '7.1.x before 7.1.3',
+    'solution': 'Upgrade to PHP version 5.6.31, 7.0.17,[newline]  7.1.3 or '
+                'later.',
+    'vendor_reference': 'URL:http://www.php.net/ChangeLog-5.php, '
+                        'URL:http://www.php.net/ChangeLog-7.php',
+    'vulnerability_category': 'Denial of Service',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successfully exploiting this issue '
+                            'allow[newline]  an attacker to cause a CPU '
+                            'consumption denial of service attack.',
+    'vulnerability_name': 'PHP Denial of Service Vulnerability Jul17 (Linux)'}],
+  [{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': [],
+    'cvss_base': 7.5,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     5.6.40\n'
+                             'Installation\n'
+                             'path / port:       443/tcp',
+    'hid': 'HID-2-1-376505',
+    'modified': '2019-02-26T03:40:29Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2019-02-26T03:29:33Z',
+    'severity': 'high',
+    'software': 'PHP versions before 5.6.40, 7.x before 7.1.26, 7.2.x before '
+                '7.2.14 and[newline]7.3.x before 7.3.1.',
+    'solution': 'Update to version 5.6.40, 7.1.16, 7.2.14, 7.3.1 or later.',
+    'vendor_reference': 'URL:https://bugs.php.net/bug.php?id=77242, '
+                        'URL:https://bugs.php.net/bug.php?id=77249, '
+                        'URL:https://bugs.php.net/bug.php?id=77247, '
+                        'URL:https://bugs.php.net/bug.php?id=77370, '
+                        'URL:https://bugs.php.net/bug.php?id=77371, '
+                        'URL:https://bugs.php.net/bug.php?id=77381, '
+                        'URL:https://bugs.php.net/bug.php?id=77382, '
+                        'URL:https://bugs.php.net/bug.php?id=77385, '
+                        'URL:https://bugs.php.net/bug.php?id=77394, '
+                        'URL:https://bugs.php.net/bug.php?id=77418, '
+                        'URL:https://bugs.php.net/bug.php?id=77380',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'not specified',
+    'vulnerability_name': 'PHP Multiple Vulnerabilities - Feb19 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': [],
+    'cvss_base': 7.5,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     5.6.40\n'
+                             'Installation\n'
+                             'path / port:       80/tcp',
+    'hid': 'HID-2-1-376505',
+    'modified': '2019-02-26T03:40:29Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2019-02-26T03:29:33Z',
+    'severity': 'high',
+    'software': 'PHP versions before 5.6.40, 7.x before 7.1.26, 7.2.x before '
+                '7.2.14 and[newline]7.3.x before 7.3.1.',
+    'solution': 'Update to version 5.6.40, 7.1.16, 7.2.14, 7.3.1 or later.',
+    'vendor_reference': 'URL:https://bugs.php.net/bug.php?id=77242, '
+                        'URL:https://bugs.php.net/bug.php?id=77249, '
+                        'URL:https://bugs.php.net/bug.php?id=77247, '
+                        'URL:https://bugs.php.net/bug.php?id=77370, '
+                        'URL:https://bugs.php.net/bug.php?id=77371, '
+                        'URL:https://bugs.php.net/bug.php?id=77381, '
+                        'URL:https://bugs.php.net/bug.php?id=77382, '
+                        'URL:https://bugs.php.net/bug.php?id=77385, '
+                        'URL:https://bugs.php.net/bug.php?id=77394, '
+                        'URL:https://bugs.php.net/bug.php?id=77418, '
+                        'URL:https://bugs.php.net/bug.php?id=77380',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'not specified',
+    'vulnerability_name': 'PHP Multiple Vulnerabilities - Feb19 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': [],
+    'cvss_base': 6.8,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     5.6.36\n'
+                             'Installation\n'
+                             'path / port:       443/tcp',
+    'hid': 'HID-2-1-047627',
+    'modified': '2019-05-03T08:55:39Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2018-05-02T12:32:28Z',
+    'severity': 'high',
+    'software': 'PHP versions prior to 5.6.36,[newline][newline]  PHP versions '
+                '7.2.x prior to 7.2.5,[newline][newline]  PHP versions 7.0.x '
+                'prior to 7.0.30,[newline][newline]  PHP versions 7.1.x prior '
+                'to 7.1.17 on Linux.',
+    'solution': 'Upgrade to version 7.2.5 or 7.0.30 or[newline]  5.6.36 or '
+                '7.1.17 or later. Please see the references for more '
+                'information.',
+    'vendor_reference': 'URL:http://www.php.net/ChangeLog-5.php#5.6.36, '
+                        'URL:http://www.php.net/ChangeLog-7.php#7.0.30, '
+                        'URL:http://www.php.net/ChangeLog-7.php#7.1.17, '
+                        'URL:http://www.php.net/ChangeLog-7.php#7.2.5',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow an '
+                            'attacker[newline]  to conduct XSS attacks, crash '
+                            'PHP, conduct denial-of-service condition '
+                            'and[newline]  execute arbitrary code in the '
+                            'context of the affected application.',
+    'vulnerability_name': 'PHP Multiple Vulnerabilities May18 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': [],
+    'cvss_base': 6.8,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     5.6.36\n'
+                             'Installation\n'
+                             'path / port:       80/tcp',
+    'hid': 'HID-2-1-047627',
+    'modified': '2019-05-03T08:55:39Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2018-05-02T12:32:28Z',
+    'severity': 'high',
+    'software': 'PHP versions prior to 5.6.36,[newline][newline]  PHP versions '
+                '7.2.x prior to 7.2.5,[newline][newline]  PHP versions 7.0.x '
+                'prior to 7.0.30,[newline][newline]  PHP versions 7.1.x prior '
+                'to 7.1.17 on Linux.',
+    'solution': 'Upgrade to version 7.2.5 or 7.0.30 or[newline]  5.6.36 or '
+                '7.1.17 or later. Please see the references for more '
+                'information.',
+    'vendor_reference': 'URL:http://www.php.net/ChangeLog-5.php#5.6.36, '
+                        'URL:http://www.php.net/ChangeLog-7.php#7.0.30, '
+                        'URL:http://www.php.net/ChangeLog-7.php#7.1.17, '
+                        'URL:http://www.php.net/ChangeLog-7.php#7.2.5',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow an '
+                            'attacker[newline]  to conduct XSS attacks, crash '
+                            'PHP, conduct denial-of-service condition '
+                            'and[newline]  execute arbitrary code in the '
+                            'context of the affected application.',
+    'vulnerability_name': 'PHP Multiple Vulnerabilities May18 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [103204],
+    'cve_ids': [],
+    'cvss_base': 7.5,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     5.6.34\n'
+                             'Installation\n'
+                             'path / port:       443/tcp',
+    'hid': 'HID-2-1-046388',
+    'modified': '2018-11-16T16:12:15Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2018-03-12T11:54:20Z',
+    'severity': 'high',
+    'software': 'PHP versions 7.2.x prior to 7.2.3,[newline][newline]  PHP '
+                'versions 7.0.x prior to 7.0.28,[newline][newline]  PHP '
+                'versions 5.0.x prior to 5.6.34 and[newline][newline]  PHP '
+                'versions 7.1.x prior to 7.1.15 on Linux.',
+    'solution': 'Upgrade to version 7.2.3, 7.0.28,[newline]  5.6.34, 7.1.15 or '
+                'later.',
+    'vendor_reference': 'URL:http://php.net/ChangeLog-7.php, '
+                        'URL:https://bugs.php.net/bug.php?id=75981, '
+                        'URL:http://www.php.net',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow an '
+                            'attacker[newline]  to execute arbitrary code in '
+                            'the context of the affected application. '
+                            'Failed[newline]  exploit attempts will result in '
+                            'denial-of-service conditions.',
+    'vulnerability_name': 'PHP Stack Buffer Overflow Vulnerability Mar18 '
+                          '(Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [103204],
+    'cve_ids': [],
+    'cvss_base': 7.5,
+    'detection_information': 'Installed version: 5.6.30\n'
+                             'Fixed version:     5.6.34\n'
+                             'Installation\n'
+                             'path / port:       80/tcp',
+    'hid': 'HID-2-1-046388',
+    'modified': '2018-11-16T16:12:15Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2018-03-12T11:54:20Z',
+    'severity': 'high',
+    'software': 'PHP versions 7.2.x prior to 7.2.3,[newline][newline]  PHP '
+                'versions 7.0.x prior to 7.0.28,[newline][newline]  PHP '
+                'versions 5.0.x prior to 5.6.34 and[newline][newline]  PHP '
+                'versions 7.1.x prior to 7.1.15 on Linux.',
+    'solution': 'Upgrade to version 7.2.3, 7.0.28,[newline]  5.6.34, 7.1.15 or '
+                'later.',
+    'vendor_reference': 'URL:http://php.net/ChangeLog-7.php, '
+                        'URL:https://bugs.php.net/bug.php?id=75981, '
+                        'URL:http://www.php.net',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Successful exploitation will allow an '
+                            'attacker[newline]  to execute arbitrary code in '
+                            'the context of the affected application. '
+                            'Failed[newline]  exploit attempts will result in '
+                            'denial-of-service conditions.',
+    'vulnerability_name': 'PHP Stack Buffer Overflow Vulnerability Mar18 '
+                          '(Linux)'}],
+  [{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': [],
+    'cvss_base': 7.5,
+    'detection_information': 'The following files are calling the function '
+                             'phpinfo() which disclose potentially sensitive '
+                             'information to the remote attacker:\n'
+                             '\n'
+                             'https://194.132.49.155/dvwa/phpinfo.php\n'
+                             'https://194.132.49.155/dvwa/test.php',
+    'hid': 'HID-2-1-34675',
+    'modified': '2017-06-16T08:59:27Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2005-11-03T13:08:04Z',
+    'severity': 'high',
+    'software': 'not specified',
+    'solution': 'Delete them or restrict access to the listened files.',
+    'vendor_reference': 'none',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Some of the information that can be gathered from '
+                            'this file includes:[newline][newline]  The '
+                            'username of the user who installed php, if they '
+                            'are a SUDO user, the IP address of the host, the '
+                            'web server [newline]  version, the system '
+                            'version(unix / linux), and the root directory of '
+                            'the web server.',
+    'vulnerability_name': 'phpinfo() output accessible'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [],
+    'cve_ids': [],
+    'cvss_base': 7.5,
+    'detection_information': 'The following files are calling the function '
+                             'phpinfo() which disclose potentially sensitive '
+                             'information to the remote attacker:\n'
+                             '\n'
+                             'http://194.132.49.155/dvwa/phpinfo.php\n'
+                             'http://194.132.49.155/dvwa/test.php',
+    'hid': 'HID-2-1-34675',
+    'modified': '2017-06-16T08:59:27Z',
+    'os': 'Debian GNU/Linux',
+    'port': 80,
+    'published': '2005-11-03T13:08:04Z',
+    'severity': 'high',
+    'software': 'not specified',
+    'solution': 'Delete them or restrict access to the listened files.',
+    'vendor_reference': 'none',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'Some of the information that can be gathered from '
+                            'this file includes:[newline][newline]  The '
+                            'username of the user who installed php, if they '
+                            'are a SUDO user, the IP address of the host, the '
+                            'web server [newline]  version, the system '
+                            'version(unix / linux), and the root directory of '
+                            'the web server.',
+    'vulnerability_name': 'phpinfo() output accessible'}],
+  [{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [106220],
+    'cve_ids': [],
+    'cvss_base': 7.5,
+    'detection_information': 'Installed version: 5.0\n'
+                             'Fixed version:     5.0.1\n'
+                             'Installation\n'
+                             'path / port:       /wordpress',
+    'hid': 'HID-2-1-346923',
+    'modified': '2019-05-17T10:45:27Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2018-12-17T13:16:22Z',
+    'severity': 'high',
+    'software': 'All versions since WordPress 3.7 up to 5.0.',
+    'solution': 'The issues have been fixed in version 5.0.1.[newline]  '
+                'Updated versions of WordPress 4.9 and older releases are also '
+                'available.[newline][newline]  Please see the references for '
+                'more information.',
+    'vendor_reference': 'URL:https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/, '
+                        'URL:https://wordpress.org/download/releases/',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'not specified',
+    'vulnerability_name': 'WordPress Multiple Vulnerabilities (Security '
+                          'Release) - December 2018 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [107088],
+    'cve_ids': [],
+    'cvss_base': 6.5,
+    'detection_information': 'Installed version: 5.0\n'
+                             'Fixed version:     5.0.1\n'
+                             'Installation\n'
+                             'path / port:       /wordpress',
+    'hid': 'HID-2-1-376586',
+    'modified': '2019-05-17T10:45:27Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2019-02-22T06:59:06Z',
+    'severity': 'high',
+    'software': 'WordPress prior version 4.9.9 and 5.0.1.',
+    'solution': 'Update to version 4.9.9, 5.0.1 or later.',
+    'vendor_reference': 'URL:https://blog.ripstech.com/2019/wordpress-image-remote-code-execution/',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'not specified',
+    'vulnerability_name': 'WordPress RCE Vulnerability CVE-2019-8942 (Linux)'}],
+  [{'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [106220],
+    'cve_ids': [],
+    'cvss_base': 7.5,
+    'detection_information': 'Installed version: 5.0\n'
+                             'Fixed version:     5.0.1\n'
+                             'Installation\n'
+                             'path / port:       /wordpress',
+    'hid': 'HID-2-1-346923',
+    'modified': '2019-05-17T10:45:27Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2018-12-17T13:16:22Z',
+    'severity': 'high',
+    'software': 'All versions since WordPress 3.7 up to 5.0.',
+    'solution': 'The issues have been fixed in version 5.0.1.[newline]  '
+                'Updated versions of WordPress 4.9 and older releases are also '
+                'available.[newline][newline]  Please see the references for '
+                'more information.',
+    'vendor_reference': 'URL:https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/, '
+                        'URL:https://wordpress.org/download/releases/',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'not specified',
+    'vulnerability_name': 'WordPress Multiple Vulnerabilities (Security '
+                          'Release) - December 2018 (Linux)'},
+   {'asset_uuid': '90d4d197-6717-4a3a-ba36-a579cbcf1e8e',
+    'bugtracking_ids': [107088],
+    'cve_ids': [],
+    'cvss_base': 6.5,
+    'detection_information': 'Installed version: 5.0\n'
+                             'Fixed version:     5.0.1\n'
+                             'Installation\n'
+                             'path / port:       /wordpress',
+    'hid': 'HID-2-1-376586',
+    'modified': '2019-05-17T10:45:27Z',
+    'os': 'Debian GNU/Linux',
+    'port': 443,
+    'published': '2019-02-22T06:59:06Z',
+    'severity': 'high',
+    'software': 'WordPress prior version 4.9.9 and 5.0.1.',
+    'solution': 'Update to version 4.9.9, 5.0.1 or later.',
+    'vendor_reference': 'URL:https://blog.ripstech.com/2019/wordpress-image-remote-code-execution/',
+    'vulnerability_category': 'Web application abuses',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': 'not specified',
+    'vulnerability_name': 'WordPress RCE Vulnerability CVE-2019-8942 '
+                          '(Linux)'}]]]
