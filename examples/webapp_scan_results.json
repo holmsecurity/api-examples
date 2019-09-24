@@ -1,0 +1,494 @@
+[{'finished_date': '2019-09-13T12:36:09Z',
+  'name': 'tij.me',
+  'progress_percent': 0,
+  'started_date': '2019-09-13T12:34:18Z',
+  'status': 'completed',
+  'uuid': '596cad6a-5ba2-42c4-93fb-f89d7e640094',
+  'vulnerabilities_count': 23,
+  'webapp_asset': {'uri': 'https://tij.me',
+                   'uuid': 'd76820c9-e076-47ea-bb30-f079262e5c44'}}]
+[[[{'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'The remote web server sent 29 HTTP responses '
+                             'with the uncommon response header '
+                             '"referrer-policy", one of the received header '
+                             'values is "no-referrer". The first ten URLs '
+                             'which sent the uncommon header are:\n'
+                             ' - https://tij.me/manifest.json\n'
+                             ' - https://tij.me/tulip.svg\n'
+                             ' - https://tij.me/gears_config.php\n'
+                             ' - https://tij.me/\n'
+                             ' - https://tij.me/gears-manifest.json\n'
+                             ' - '
+                             'https://tij.me/blog/securing-your-hometown-in-case-of-a-direct-teorrorist-threat/header.jpg\n'
+                             ' - https://tij.me/cachemanifest.json\n'
+                             ' - https://tij.me/filesInCache.txt\n'
+                             ' - '
+                             'https://tij.me/blog/scamming-people-via-ethereum-smart-contracts/\n'
+                             ' - '
+                             'https://tij.me/blog/scamming-people-via-ethereum-smart-contracts/header.jpg\n',
+    'hid': 'HID-3-0-10108',
+    'modified': '2016-11-10T04:06:25Z',
+    'payload': '',
+    'published': '2016-11-10T04:04:42Z',
+    'request': '',
+    'severity': 'low',
+    'solution': None,
+    'url': 'https://tij.me/manifest.json',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Strange header'},
+   {'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: "https://tij.me/JrHCj".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/JrHCj',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'},
+   {'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: '
+                             '"https://tij.me/blog/securing-your-hometown-in-case-of-a-direct-teorrorist-threat/YhxPc".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/blog/securing-your-hometown-in-case-of-a-direct-teorrorist-threat/YhxPc',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'},
+   {'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: '
+                             '"https://tij.me/blog/scamming-people-via-ethereum-smart-contracts/ZKqmu".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/blog/scamming-people-via-ethereum-smart-contracts/ZKqmu',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'},
+   {'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: '
+                             '"https://tij.me/responsible-disclosure/VEkOz".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/responsible-disclosure/VEkOz',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'},
+   {'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: '
+                             '"https://tij.me/hall-of-fame/MKMbz".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/hall-of-fame/MKMbz',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'}],
+  [{'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: '
+                             '"https://tij.me/about/LeQUf".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/about/LeQUf',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'},
+   {'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: '
+                             '"https://tij.me/blog/i-decided-to-give-my-blog-another-upgrade/aRKXh".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/blog/i-decided-to-give-my-blog-another-upgrade/aRKXh',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'},
+   {'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: '
+                             '"https://tij.me/blog/an-efficiency-improvement-for-burp-suite/qScle".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/blog/an-efficiency-improvement-for-burp-suite/qScle',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'},
+   {'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: '
+                             '"https://tij.me/blog/migrating-your-one-time-passwords-to-raivo-otp/ARWjA".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/blog/migrating-your-one-time-passwords-to-raivo-otp/ARWjA',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'},
+   {'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: '
+                             '"https://tij.me/blog/xss-on-hema-one-of-the-largest-dutch-franchisors/pAIZB".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/blog/xss-on-hema-one-of-the-largest-dutch-franchisors/pAIZB',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'},
+   {'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: '
+                             '"https://tij.me/blog/adding-placeholders-to-uitextviews-in-swift/tzljk".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/blog/adding-placeholders-to-uitextviews-in-swift/tzljk',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'},
+   {'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: '
+                             '"https://tij.me/blog/a-web-application-crawler-for-bug-bounty-hunting/Gvurr".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/blog/a-web-application-crawler-for-bug-bounty-hunting/Gvurr',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'},
+   {'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: '
+                             '"https://tij.me/css/ZYzEm".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/css/ZYzEm',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'},
+   {'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: '
+                             '"https://tij.me/blog/stealing-passwords-from-mcdonalds-users/GeLnl".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/blog/stealing-passwords-from-mcdonalds-users/GeLnl',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'},
+   {'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: '
+                             '"https://tij.me/blog/migrating-your-one-time-passwords-from-authy-to-raivo-otp/PbVNF".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/blog/migrating-your-one-time-passwords-from-authy-to-raivo-otp/PbVNF',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'}],
+  [{'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: '
+                             '"https://tij.me/feeds/rss/pkDJs".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/feeds/rss/pkDJs',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'},
+   {'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'The remote web server sent 14 HTTP responses '
+                             'with the uncommon response header "upgrade", one '
+                             'of the received header values is "h2,h2c". The '
+                             'first ten URLs which sent the uncommon header '
+                             'are:\n'
+                             ' - '
+                             'https://tij.me/blog/stealing-passwords-from-mcdonalds-users/search-value-test-preview.png\n'
+                             ' - '
+                             'https://tij.me/blog/stealing-passwords-from-mcdonalds-users/alert-my-password.png\n'
+                             ' - https://tij.me/JrHCj\n'
+                             ' - '
+                             'https://tij.me/blog/scamming-people-via-ethereum-smart-contracts/header.jpg\n'
+                             ' - '
+                             'https://tij.me/blog/securing-your-hometown-in-case-of-a-direct-teorrorist-threat/amsterdam.png\n'
+                             ' - '
+                             'https://tij.me/blog/stealing-passwords-from-mcdonalds-users/encrypt-decrypt-source.png\n'
+                             ' - '
+                             'https://tij.me/blog/xss-on-hema-one-of-the-largest-dutch-franchisors/xss-payload-in-source.jpg\n'
+                             ' - https://tij.me/_vti_inf.html\n'
+                             ' - '
+                             'https://tij.me/blog/stealing-passwords-from-mcdonalds-users/cookie-pass-decrypt-source.png\n'
+                             ' - '
+                             'https://tij.me/blog/stealing-passwords-from-mcdonalds-users/char-at-success.png\n',
+    'hid': 'HID-3-0-10108',
+    'modified': '2016-11-10T04:06:25Z',
+    'payload': '',
+    'published': '2016-11-10T04:04:42Z',
+    'request': '',
+    'severity': 'low',
+    'solution': None,
+    'url': 'https://tij.me/blog/stealing-passwords-from-mcdonalds-users/search-value-test-preview.png',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Strange header'}],
+  [{'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'DAV seems to be correctly configured and '
+                             'allowing you to use the PUT method but the '
+                             'directory does not have the right permissions '
+                             'that would allow the web server to write to it. '
+                             'This error was found at: '
+                             '"https://tij.me/feeds/rss/pkDJs".',
+    'hid': 'HID-3-0-10081',
+    'modified': '2016-07-05T02:49:45Z',
+    'payload': '',
+    'published': '2016-10-31T04:47:20Z',
+    'request': '',
+    'severity': 'low',
+    'solution': 'Review DAV configuration and correct errors.',
+    'url': 'https://tij.me/feeds/rss/pkDJs',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Incorrect DAV configuration'},
+   {'bugtracking_ids': None,
+    'cve_ids': [],
+    'cvss_base': 1.0,
+    'detection_information': 'The remote web server sent 14 HTTP responses '
+                             'with the uncommon response header "upgrade", one '
+                             'of the received header values is "h2,h2c". The '
+                             'first ten URLs which sent the uncommon header '
+                             'are:\n'
+                             ' - '
+                             'https://tij.me/blog/stealing-passwords-from-mcdonalds-users/search-value-test-preview.png\n'
+                             ' - '
+                             'https://tij.me/blog/stealing-passwords-from-mcdonalds-users/alert-my-password.png\n'
+                             ' - https://tij.me/JrHCj\n'
+                             ' - '
+                             'https://tij.me/blog/scamming-people-via-ethereum-smart-contracts/header.jpg\n'
+                             ' - '
+                             'https://tij.me/blog/securing-your-hometown-in-case-of-a-direct-teorrorist-threat/amsterdam.png\n'
+                             ' - '
+                             'https://tij.me/blog/stealing-passwords-from-mcdonalds-users/encrypt-decrypt-source.png\n'
+                             ' - '
+                             'https://tij.me/blog/xss-on-hema-one-of-the-largest-dutch-franchisors/xss-payload-in-source.jpg\n'
+                             ' - https://tij.me/_vti_inf.html\n'
+                             ' - '
+                             'https://tij.me/blog/stealing-passwords-from-mcdonalds-users/cookie-pass-decrypt-source.png\n'
+                             ' - '
+                             'https://tij.me/blog/stealing-passwords-from-mcdonalds-users/char-at-success.png\n',
+    'hid': 'HID-3-0-10108',
+    'modified': '2016-11-10T04:06:25Z',
+    'payload': '',
+    'published': '2016-11-10T04:04:42Z',
+    'request': '',
+    'severity': 'low',
+    'solution': None,
+    'url': 'https://tij.me/blog/stealing-passwords-from-mcdonalds-users/search-value-test-preview.png',
+    'vendor_reference': None,
+    'vulnerability_category': 'Security Misconfiguration',
+    'vulnerability_ignored': False,
+    'vulnerability_impact': None,
+    'vulnerability_name': 'Strange header'}]]]

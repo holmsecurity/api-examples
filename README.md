@@ -82,3 +82,59 @@ HTTP/1.1 201 Created
     "uuid": "bc62e282-828d-49bc-8c43-9b717e85b9ee"
 }
 ```
+
+### API example file
+
+An [example file](https://github.com/holmsecurity/api-examples/blob/master/api-examples.py) has been composed which servers to exemplify how the API can be used. Two use cases are present in the file:
+
+ The example script is used simply by running the python code with python3 interpreter and takes input arguments from CLI.
+ The output will be printed to STDOUT. There are two different scans that can be run using the example script with flag "--type" or "-tp"
+
+In order to alter the script to output JSON instead of printing to STDOUT simply change the return statements to return the objects {scans} and {scan_results) instead of printing them,
+
+The following are examples of how to run the api-examples.py:
+
+ 
+ `$ python3 api-examples -t 256 -l 200 -tp net_scan`
+ 
+ Returns all network scans from the last 256 hour period, limit the number of scans to 200.
+ For example output see:
+ [output network scan](https://github.com/holmsecurity/api-examples/blob/master/examples/network_scan_results.json)
+ 
+  `$ python3 api-examples -t 128 -l 100 -tp net_scan -s "high, critical"`
+  
+Returns all network scans from the last 128 hour period, limit the number of scans to 100 and filter scan results by severity high and/or critical.
+For example output see:
+[output webapp scan](https://github.com/holmsecurity/api-examples/blob/master/examples/webapp_scan_results.json)
+
+Full help docs for the api-examples:
+
+```
+python3 api-examples.py -help                                                    
+usage: api-examples.py [-h] [--api API] [--time TIME] [--limit LIMIT]
+                       [--type TYPE] [--severity SEVERITY]
+                       key
+
+positional arguments:
+  key                   API key to be used
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --api API, -a API     API URL to use, default https://se-
+                        api.holmsecurity.com/v1
+  --time TIME, -t TIME  Timeperiod to grab scan results from: Specified in
+                        hours e.g 24, 48 or 768 (default: 24)
+  --limit LIMIT, -l LIMIT
+                        result limit, eg. maximum number of scans to return.
+                        (default: 10)
+  --type TYPE, -tp TYPE
+                        scan type to run, eg. net_scan or web_scan, default
+                        net_scan
+  --severity SEVERITY, -s SEVERITY
+                        severity level for filtering scan result
+                        vulnerabilities. For multiple severities please
+                        provide a list as such: 'high, medium' !Note the
+                        space!(default: 'high')
+
+```
+
