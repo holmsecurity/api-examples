@@ -99,7 +99,7 @@ The following are examples of how to run the api-examples.py:
  
  Returns all network scans from the last 256 hour period, limit the number of scans to 200.
  For example output see:
- [output network scan](https://github.com/holmsecurity/api-examples/blob/master/examples/webapp_scan_results.json)
+ [output network scan](https://github.com/holmsecurity/api-examples/blob/master/examples/network_scan_results.json)
  
   `$ python3 get_scan_results -t 128 -l 100 -tp net_scan -s "high, critical"`
   
