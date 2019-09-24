@@ -95,13 +95,13 @@ In order to alter the script to output JSON instead of printing to STDOUT simply
 The following are examples of how to run the api-examples.py:
 
  
- `$ python3 api-examples -t 256 -l 200 -tp net_scan`
+ `$ python3 get_scan_results -t 256 -l 200 -tp net_scan`
  
  Returns all network scans from the last 256 hour period, limit the number of scans to 200.
  For example output see:
  [output network scan](https://github.com/holmsecurity/api-examples/blob/master/examples/webapp_scan_results.json)
  
-  `$ python3 api-examples -t 128 -l 100 -tp net_scan -s "high, critical"`
+  `$ python3 get_scan_results -t 128 -l 100 -tp net_scan -s "high, critical"`
   
 Returns all network scans from the last 128 hour period, limit the number of scans to 100 and filter scan results by severity high and/or critical.
 For example output see:
@@ -110,10 +110,10 @@ For example output see:
 Full help docs for the api-examples:
 
 ```
-python3 api-examples.py -help                                                    
-usage: api-examples.py [-h] [--api API] [--time TIME] [--limit LIMIT]
-                       [--type TYPE] [--severity SEVERITY]
-                       key
+python3 get_scan_results.py -help                                                    
+usage: get_scan_results.py [-h] [--api API] [--time TIME] [--limit LIMIT]
+                           [--type TYPE] [--severity SEVERITY]
+                           key
 
 positional arguments:
   key                   API key to be used
@@ -135,6 +135,7 @@ optional arguments:
                         vulnerabilities. For multiple severities please
                         provide a list as such: 'high, medium' !Note the
                         space!(default: 'high')
+
 
 ```
 

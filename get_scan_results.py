@@ -92,7 +92,7 @@ get_net_scans = get_net_scans(
     
 For example, the script can be run with:
 
-$ python3 api-examples.py abcd123456 -t 256 -l 2
+$ python3 get_scan_results.py abcd123456 -t 256 -l 2
 
 This will send a request to the default API URL using provided "key" abcd123456, get the network scans for the last 256 
 hours and limit the result to be the two latest scans. Output to expect should look something like this:
