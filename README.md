@@ -85,7 +85,7 @@ HTTP/1.1 201 Created
 
 ### API example file
 
-An [example file](https://github.com/holmsecurity/api-examples/blob/master/api-examples.py) has been composed which servers to exemplify how the API can be used. Two use cases are present in the file:
+An [example file](https://github.com/holmsecurity/api-examples/blob/master/api-examples.py) has been composed which servers to exemplify how the API can be used.
 
  The example script is used simply by running the python code with python3 interpreter and takes input arguments from CLI.
  The output will be printed to STDOUT. There are two different scans that can be run using the example script with flag "--type" or "-tp"
