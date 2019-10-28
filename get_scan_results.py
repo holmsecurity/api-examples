@@ -140,8 +140,8 @@ def main():
         '--severity',
         '-s',
         help='severity level for filtering scan result vulnerabilities. For multiple '
-        'severities please provide a list as such: 'high, medium' !Note the space!'
-        '(default: 'high')',
+        'severities please provide a space separated list such as: "high medium"',
+        nargs='+',
         default='high'
     )
     args = parser.parse_args()
@@ -152,7 +152,7 @@ def main():
         results_limit=args.limit,
         api_key=args.key,
         api_endpoint=args.api,
-        severity=args.severity.split()
+        severity=args.severity
     )
 
 
