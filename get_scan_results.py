@@ -56,10 +56,13 @@ class ScanKind(enum.Enum):
 def get_scans(
     scan_type, time_period, results_limit, api_key, api_endpoint, severity
 ):
-    if scan_type == ScanKind.WEB:
+    col_size = 22
+    if scan_type == ScanKind.WEB.value:
         api_url = f"{api_endpoint}/web-scans"
+        pprint("-" * col_size + "GET WEB SCANS" + "-" * col_size)
     else:
         api_url = f"{api_endpoint}/net-scans"
+        pprint("-" * col_size + "GET NET SCANS" + "-" * col_size)
 
     offset = 0
     num_of_items = 0
@@ -142,12 +145,6 @@ def main():
         default="high"
     )
     args = parser.parse_args()
-
-    col_size = 22
-    if args.type == 'web_scan':
-        pprint("-" * col_size + "GET WEB SCANS" + "-" * col_size)
-    else:
-        pprint("-" * col_size + "GET NET SCANS" + "-" * col_size)
 
     get_scans(
         scan_type=args.type,
