@@ -45,7 +45,7 @@ Parameters:
 
 """
 
-DEFAULT_API_URL = "https://se-api.holmsecurity.com/v1"
+DEFAULT_API_URL = 'https://se-api.holmsecurity.com/v1'
 
 
 class ScanKind(enum.Enum):
@@ -58,11 +58,11 @@ def get_scans(
 ):
     col_size = 22
     if scan_type == ScanKind.WEB.value:
-        api_url = f"{api_endpoint}/web-scans"
-        pprint("-" * col_size + "GET WEB SCANS" + "-" * col_size)
+        api_url = f'{api_endpoint}/web-scans'
+        pprint('-' * col_size + 'GET WEB SCANS' + '-' * col_size)
     else:
-        api_url = f"{api_endpoint}/net-scans"
-        pprint("-" * col_size + "GET NET SCANS" + "-" * col_size)
+        api_url = f'{api_endpoint}/net-scans'
+        pprint('-' * col_size + 'GET NET SCANS' + '-' * col_size)
 
     offset = 0
     num_of_items = 0
@@ -110,39 +110,39 @@ def get_scans(
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("key", help="API key to be used")
+    parser.add_argument('key', help='API key to be used')
     parser.add_argument(
-        "--api", "-a", help="API URL to use", default=DEFAULT_API_URL
+        '--api', '-a', help='API URL to use', default=DEFAULT_API_URL
     )
     parser.add_argument(
-        "--time",
-        "-t",
-        help="Timeperiod to grab scan results from: Specified in hours e.g 24, 48 or 768 "
-        "(default: 24)",
+        '--time',
+        '-t',
+        help='Timeperiod to grab scan results from: Specified in hours e.g 24, 48 or 768 '
+        '(default: 24)',
         type=int,
         default=24
     )
     parser.add_argument(
-        "--limit",
-        "-l",
-        help="result limit, eg. maximum number of scans to return. (default: 10)",
+        '--limit',
+        '-l',
+        help='result limit, eg. maximum number of scans to return. (default: 10)',
         type=int,
         default=10
     )
     parser.add_argument(
-        "--type",
-        "-tp",
-        help="scan type to run, eg. net_scan or web_scan, default net_scan",
+        '--type',
+        '-tp',
+        help='scan type to run, eg. net_scan or web_scan, default net_scan',
         default=ScanKind.NET.value,
         choices=[k.value for k in ScanKind]
     )
     parser.add_argument(
-        "--severity",
-        "-s",
-        help="severity level for filtering scan result vulnerabilities. For multiple "
-        "severities please provide a list as such: 'high, medium' !Note the space!"
-        "(default: 'high')",
-        default="high"
+        '--severity',
+        '-s',
+        help='severity level for filtering scan result vulnerabilities. For multiple '
+        'severities please provide a list as such: 'high, medium' !Note the space!'
+        '(default: 'high')',
+        default='high'
     )
     args = parser.parse_args()
 

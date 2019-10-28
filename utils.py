@@ -23,8 +23,8 @@ def get_data_from_api(url, api_key, offset):
     Returns:
         API response
     """
-    headers = {"Authorization": f"Token {api_key}"}
-    api_url = f"{url}?offset={offset}"
+    headers = {'Authorization': f'Token {api_key}'}
+    api_url = f'{url}?offset={offset}'
     response = requests.get(api_url, headers=headers)
     response.raise_for_status()
     return response
@@ -102,7 +102,7 @@ def get_scan_results(scans, api_url, api_key, severity):
     results = []
     for scan in scans:
         uuid = scan['uuid']
-        api_url_scan = f"{api_url}/{uuid}/results"
+        api_url_scan = f'{api_url}/{uuid}/results'
         scan_results = get_scan_results_from_api(api_url_scan, api_key, severity)
         if scan_results:
             results.append(scan_results)
