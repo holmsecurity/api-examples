@@ -1,53 +1,53 @@
 from datetime import datetime, timedelta
-import requests
-import dateutil.parser
+
 import pytz
+import requests
+
+import dateutil.parser
+
 
 """
 Helper functions for api-examples script
 """
 
-"""
-get_data_from_api - return data from API
-
-Parameters: 
-    url: API url to use
-    api_key: API key of the SC account
-    offset: offset point to start with for pagination (incremented by 10 per run)
-
-Returns:
-    API response
-"""
-
 
 def get_data_from_api(url, api_key, offset):
-    headers = {"Authorization": f"Token {api_key}"}
-    api_url = f"{url}?offset={offset}"
+    """
+    Make request to the API.
+
+    Parameters:
+        url: API url to use
+        api_key: API key of the SC account
+        offset: offset point to start with for pagination (incremented by 10 per run)
+
+    Returns:
+        API response
+    """
+    headers = {'Authorization': f'Token {api_key}'}
+    api_url = f'{url}?offset={offset}'
     response = requests.get(api_url, headers=headers)
     response.raise_for_status()
     return response
 
 
-"""
-get_scan_results_from_api - return scan result data from API
+def get_scan_results_from_api(api_url, api_key, severity_list):
+    """
+    Return scan result data from API.
 
-Parameters: 
-    api_url: API url to use
-    api_key: API key of the SC account
-    severity: severity level to filter on
+    Parameters:
+        api_url: API url to use
+        api_key: API key of the SC account
+        severity_list: list of all severities to filter by
 
-Returns:
-    API response
-"""
-
-
-def get_scan_results_from_api(api_url, api_key, severity):
+    Returns:
+        API response
+    """
     offset = 0
     result = []
     response = get_data_from_api(api_url, api_key, offset)
     if response.status_code == 200:
         content = response.json()
-        filtered_data = filter_scan_results_on_severity(content, severity)
+        filtered_data = filter_scan_results_on_severity(content, severity_list)
         if len(filtered_data) > 0:
             result.append(filtered_data)
         while content['next']:
@@ -56,20 +56,18 @@ def get_scan_results_from_api(api_url, api_key, severity):
                 response = get_data_from_api(api_url, api_key, offset)
                 if response.status_code == 200:
                     content = response.json()
-                    filtered_data = filter_scan_results_on_severity(content, severity)
+                    filtered_data = filter_scan_results_on_severity(content, severity_list)
                     if len(filtered_data) > 0:
                         result.append(filtered_data)
                 else:
                     break
             except KeyError:
                 break
-        filtered_data = filter_scan_results_on_severity(content, severity)
+        filtered_data = filter_scan_results_on_severity(content, severity_list)
         if len(filtered_data) > 0:
             result.append(filtered_data)
-        if result:
-            return result
-        else:
-            return
+        return result
+
     else:
         return response.content
 
@@ -81,39 +79,30 @@ def filter_scans_on_time_period(data, time_period):
     return data_filtered_on_time_period
 
 
-def filter_scan_results_on_severity(scans, severity):
-    scan_results_filtered_on_severity = [x for x in scans['results'] if x['severity'] in severity]
-    return scan_results_filtered_on_severity
+def filter_scan_results_on_severity(scans, severity_list):
+    return [
+        x for x in scans['results'] if x['severity'] in severity_list
+    ]
 
 
-"""
-get_scan_results - get scan results from each scan
+def get_scan_results(scans, api_url, api_key, severity_list):
+    """
+    Get scan results from each scan.
 
-Parameters: 
-    scans: list of scans containing UUID
-    api_url: API url to use
-    api_key: API key of the SC account
-    severity: severity level to filter on
+    Parameters:
+        scans: list of scans containing UUID
+        api_url: API url to use
+        api_key: API key of the SC account
+        severity_list: list of all severities to filter by
 
-Returns:
-    API response
-"""
-
-
-def get_scan_results(scans, api_url, api_key, severity):
+    Returns:
+        API response
+    """
     results = []
     for scan in scans:
         uuid = scan['uuid']
-        api_url_scan = f"{api_url}/{uuid}/results"
-        scan_results = get_scan_results_from_api(api_url_scan, api_key, severity)
+        api_url_scan = f'{api_url}/{uuid}/results'
+        scan_results = get_scan_results_from_api(api_url_scan, api_key, severity_list)
         if scan_results:
             results.append(scan_results)
     return results
-
-
-def get_data_as_list(data_list):
-    results = []
-    for data in data_list:
-        results.append(data)
-    return results
-
