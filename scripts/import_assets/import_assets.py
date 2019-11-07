@@ -11,9 +11,9 @@ This code importing csv files including information about assets and creates ass
 """
 
 
-def read_post_data(args):
+def read_and_create_assets(args):
     """
-    The function takes in args from the user and returns either successful post request or a message with the error.
+    Reads data from CSV file and posts it as JSON to the API.
     """
 
     with open(args.csv_path, 'r') as csv_file:
@@ -56,8 +56,10 @@ def str_to_bool(s):
 
 
 def get_asset_type(ip_row):
-    """
-    The function takes in ip_row containing ip or ip_range and detemine whether it is a network or host
+    """"
+    Check the type of the asset by the IP/IP range. We support two types of assets:
+    - network  (eg. 192.168.0.1/24)
+    - host        (eg. 192.168.0.134)
     """
 
     if "/" in ip_row:
@@ -101,4 +103,4 @@ def get_args():
 
 if __name__ == '__main__':
     args = get_args()
-    asset_data = read_post_data(args)
+    asset_data = read_and_create_assets(args)
