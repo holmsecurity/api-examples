@@ -38,7 +38,7 @@ test_three,neutral,description of the scan,186e0a25-e28b-4ecf-b9ad-223c8ee2a62d,
 ## To run the code 
 
 ```
-$ python3 main.py -p file.csv -k xxxxxxxxxx -u your_url
+$ python3 import_assets.py in.py -p file.csv -k xxxxxxxxxx -u your_url
 ```
 
 
