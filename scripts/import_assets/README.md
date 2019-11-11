@@ -11,7 +11,7 @@ To use this code, the following inputs are requierd;
 * CSV file containg the assets in the following format:
 
 ```
-name, type, business impact, details, tags, hosts personal data, ip/ip range
+name, business impact, details, tags, hosts personal data, ip/ip range
 ```
 For instance: 
 
