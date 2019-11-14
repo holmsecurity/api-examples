@@ -35,7 +35,6 @@ def read_data(args):
                 dict_fields.update({"ip": ip})
 
             update_asset_request(args, dict_fields)
-            return
 
 
 def get_asset_type(ip_row):
@@ -65,7 +64,6 @@ def update_asset_request(args, dict_fields):
         "Content-Type": "application/json"
     }
     response = requests.patch(url=url, data=json_data_new, headers=headers)
-    print(response.content)
     response.raise_for_status()
     return
 
@@ -92,4 +90,4 @@ def get_args():
 
 if __name__ == '__main__':
     args = get_args()
-    asset_data = read_data(args)
+    read_data(args)
