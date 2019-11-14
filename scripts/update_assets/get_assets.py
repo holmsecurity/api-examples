@@ -1,7 +1,9 @@
 import argparse
 import csv
 from urllib.parse import urljoin
+
 import requests
+from requests.exceptions import HTTPError
 
 DEFAULT_API_URL = 'https://se-api.holmsecurity.com/v1/'
 
@@ -27,28 +29,33 @@ def get_asset_request(args, offset=0):
     gets data from the endpoint and rewrites it to desired format.
     """
     list_one = []
-    url = urljoin(args.url, f'net-scans/assets?offset={offset}')
-    headers = {"Authorization": f"TOKEN {args.key_token}"}
-    response = requests.get(url=url, headers=headers)
-    response.raise_for_status()
-    resp_dict = response.json()
+    resp_dict = make_request(args, offset)
     list_one.append(resp_dict)
 
     while resp_dict['next']:
         offset += 10
-        url = urljoin(args.url, f'net-scans/assets?offset={offset}')
-        headers = {"Authorization": f"TOKEN {args.key_token}"}
-        response = requests.get(url=url, headers=headers)
-        resp_dict = response.json()
+        resp_dict = make_request(args, offset)
         list_one.append(resp_dict)
-        if resp_dict['next'] == None:
+        if not resp_dict['next']:
             break
     return list_one
 
 
+def make_request(args, offset):
+    url = urljoin(args.url, f'net-scans/assets?offset={offset}')
+    headers = {"Authorization": f"TOKEN {args.key_token}"}
+    response = requests.get(url=url, headers=headers)
+    try:
+        response.raise_for_status()
+    except HTTPError as http_err:
+        raise HTTPError(http_err.response.text)
+    resp_dict = response.json()
+    return resp_dict
+
+
 def get_data(list_new):
     list_dicts = []
-    new_list = []
+    asset_list = []
 
     for resp_dict in list_new:
         assets = resp_dict['results']
@@ -73,26 +80,33 @@ def get_data(list_new):
             dict_fields['tags'].append(elements['uuid'])
         joined_tags = "|".join(dict_fields['tags'])
         dict_fields['tags'] = joined_tags
-        new_list.append(dict_fields)
-    return new_list
+        asset_list.append(dict_fields)
+    return asset_list
 
 
-def save_csv(list_new):
+def save_csv(assets_list):
     """
     input: a list including filterd dictionaries and save the data in the file.csv
     """
 
     with open('assets.csv', "w") as csv_file:
-        fieldnames = ['name', 'uuid', 'type', 'tags', 'ip', 'ip_range']
-        csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
-        for key_value_tuple in list_new:
-            csv_writer.writerow(key_value_tuple)
-    csv_file.close()
+        for assets in assets_list:
+            ip_value = assets.pop('ip', None)
+            ip_range_value = assets.pop('ip_range', None)
+            if ip_value:
+                assets['ips'] = ip_value
+            elif ip_range_value:
+                assets['ips'] = ip_range_value
+            else:
+                raise ValueError('Expected ip or ip_range to be present.')
+            fieldnames = ['name', 'uuid', 'type', 'tags', 'ips']
+            csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+            csv_writer.writerow(assets)
     return
 
 
 if __name__ == '__main__':
     args = get_args()
-    list_new = get_asset_request(args, offset=0)
-    list_neww = get_data(list_new)
-    save_csv(list_neww)
+    full_asset_info = get_asset_request(args, offset=0)
+    filterd_assets_list = get_data(full_asset_info)
+    save_csv(filterd_assets_list)

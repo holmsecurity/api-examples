@@ -33,12 +33,11 @@ test,22c5e448-0fa0-45de-bf68-396e85c365bb,host,28229346-c605-4944-a0c7-820d7d80a
 
 ## What to edit?
 
-* Tags uuids are editable, however one can only among the following static tags: 
+* Tags uuids are editable, however one can choose among the static tags, some of them could for instance be: 
     * Operating systems: 28229346-c605-4944-a0c7-820d7d80a9cc
     * Services: 7e03a282-0061-472f-b106-10b7edc7d634
     * TCP/IP ports & protocols: 186e0a25-e28b-4ecf-b9ad-223c8ee2a62d
 * The name is editable.
-* Type (the script update_assets.py edit the type automatically)
 * Ip/ip_range is editable.
 
 
