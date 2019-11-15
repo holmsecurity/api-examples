@@ -4,11 +4,31 @@ import json
 from urllib.parse import urljoin
 
 import requests
-
+from requests.exceptions import HTTPError
 DEFAULT_API_URL = 'https://se-api.holmsecurity.com/v1/'
 """
 This code takes in the modified CSV file and sends a patch request for updating the assets.
 """
+
+
+def get_args():
+    parser = argparse.ArgumentParser(description='API key of the sc account')
+    parser.add_argument('-p',
+                        '--csv-path',
+                        help='Path to the CSV file',
+                        required=True)
+    parser.add_argument('-k',
+                        '--key-token',
+                        type=str,
+                        help='Token needed to access sc-dev',
+                        required=True)
+    parser.add_argument(
+        '-u',
+        '--url',
+        help=f"API URL to use, default is set to {DEFAULT_API_URL}",
+        default=DEFAULT_API_URL)
+
+    return parser.parse_args()
 
 
 def read_data(args):
@@ -59,34 +79,18 @@ def update_asset_request(args, dict_fields):
 
     uuid = dict_fields['uuid']
     json_data_new = json.dumps(dict_fields)
-    url = urljoin(DEFAULT_API_URL, f'net-scans/assets/{uuid}')
+    url = urljoin(args.url, f'net-scans/assets/{uuid}')
     headers = {
         "Authorization": f"TOKEN {args.key_token}",
         "Content-Type": "application/json"
     }
     response = requests.patch(url=url, data=json_data_new, headers=headers)
     response.raise_for_status()
+    try:
+        response.raise_for_status()
+    except HTTPError as http_err:
+        raise HTTPError(http_err, response.text)
     return
-
-
-def get_args():
-    parser = argparse.ArgumentParser(description='API key of the sc account')
-    parser.add_argument('-p',
-                        '--csv-path',
-                        help='Path to the CSV file',
-                        required=True)
-    parser.add_argument('-k',
-                        '--key-token',
-                        type=str,
-                        help='Token needed to access sc-dev',
-                        required=True)
-    parser.add_argument(
-        '-u',
-        '--url',
-        help=f"API URL to use, default is set to {DEFAULT_API_URL}",
-        default=DEFAULT_API_URL)
-
-    return parser.parse_args()
 
 
 if __name__ == '__main__':

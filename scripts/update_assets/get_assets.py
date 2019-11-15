@@ -4,7 +4,6 @@ from urllib.parse import urljoin
 
 import requests
 from requests.exceptions import HTTPError
-
 DEFAULT_API_URL = 'https://se-api.holmsecurity.com/v1/'
 
 
@@ -48,39 +47,29 @@ def make_request(args, offset):
     try:
         response.raise_for_status()
     except HTTPError as http_err:
-        raise HTTPError(http_err.response.text)
+        raise HTTPError(http_err, response.text)
     resp_dict = response.json()
     return resp_dict
 
 
 def get_data(list_new):
-    list_dicts = []
     asset_list = []
-
     for resp_dict in list_new:
         assets = resp_dict['results']
         for dicts in assets:
-            dict_new = {
-                key: dicts[key]
-                for key in dicts.keys()
-                & {'uuid', 'name', 'type', 'tags', 'ip', 'ip_range'}
+            dict_fields = {
+                'uuid': dicts['uuid'],
+                'name': dicts['name'],
+                'type': dicts['type'],
+                'tags': [],
+                'ip': dicts['ip'],
+                'ip_range': dicts['ip_range']
             }
-            list_dicts.append(dict_new)
-
-    for row in list_dicts:
-        dict_fields = {
-            'uuid': row['uuid'],
-            'name': row['name'],
-            'type': row['type'],
-            'tags': [],
-            'ip': row['ip'],
-            'ip_range': row['ip_range']
-        }
-        for elements in row['tags']:
-            dict_fields['tags'].append(elements['uuid'])
-        joined_tags = "|".join(dict_fields['tags'])
-        dict_fields['tags'] = joined_tags
-        asset_list.append(dict_fields)
+            for elements in dicts['tags']:
+                dict_fields['tags'].append(elements['uuid'])
+            joined_tags = "|".join(dict_fields['tags'])
+            dict_fields['tags'] = joined_tags
+            asset_list.append(dict_fields)
     return asset_list
 
 
