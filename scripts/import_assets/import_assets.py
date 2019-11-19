@@ -6,6 +6,7 @@ import requests
 from requests.exceptions import HTTPError
 
 DEFAULT_API_URL = 'https://se-api.holmsecurity.com/v1/'
+
 """
 This code importing csv files including information about assets and creates assets in the holm-api endpoint. 
 """
@@ -29,11 +30,22 @@ def read_and_create_assets(args):
             dict_fields = {
                 "name": name,
                 "type": asset_type,
-                "business_impact": business_impact,
-                "details": details,
-                "tags": tags,
-                "hosts_personal_data": str_to_bool(hosts_personal_data)
+                "tags": tags
             }
+
+            if details != '':
+                dict_fields.update({'details': details})
+
+            if business_impact != '':
+                dict_fields.update({'business_impact': business_impact})
+            else:
+                dict_fields.update({'business_impact': 'neutral'})
+
+            if hosts_personal_data != '':
+                dict_fields.update({'hosts_personal_data': str_to_bool(hosts_personal_data)})
+            else:
+                dict_fields.update({'hosts_personal_data': 'False'})
+
             if asset_type == 'network':
                 dict_fields.update({"ip_range": ip})
             else:
