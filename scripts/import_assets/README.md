@@ -5,6 +5,7 @@
 Post request for assets creation by attaching CSV files stored locally. 
 ## prerequisites
 * python3
+* requests module
 
 ## Inputs arguments
 To use this code, the following inputs are requierd; 
@@ -26,7 +27,7 @@ test_three,neutral,description of the scan,186e0a25-e28b-4ecf-b9ad-223c8ee2a62d,
 * Token which gives access to the API endpoint. (mandatory)
 * Path to the csv file. (mandatory)
 * URL to the end point (https://se-api.holmsecurity.com/v1/ by default). (optional)
-* There are three statics tags to choose from: 
+* Examples of static tags one can choose from: 
     * Operating systems: 28229346-c605-4944-a0c7-820d7d80a9cc
     * Services: 7e03a282-0061-472f-b106-10b7edc7d634
     * TCP/IP ports & protocols: 186e0a25-e28b-4ecf-b9ad-223c8ee2a62d
@@ -38,7 +39,7 @@ test_three,neutral,description of the scan,186e0a25-e28b-4ecf-b9ad-223c8ee2a62d,
 ## To run the code 
 
 ```
-$ python3 import_assets.py in.py -p file.csv -k xxxxxxxxxx -u your_url
+$ python3 import_assets.py -p file.csv -k xxxxxxxxxx -u your_url
 ```
 
 
