@@ -30,21 +30,15 @@ def read_and_create_assets(args):
             dict_fields = {
                 "name": name,
                 "type": asset_type,
-                "tags": tags
+                "tags": tags,
+                "details": details or None,
+                "business_impact": business_impact or 'neutral'
             }
 
-            if details != '':
-                dict_fields.update({'details': details})
-
-            if business_impact != '':
-                dict_fields.update({'business_impact': business_impact})
-            else:
-                dict_fields.update({'business_impact': 'neutral'})
-
             if hosts_personal_data != '':
-                dict_fields.update({'hosts_personal_data': str_to_bool(hosts_personal_data)})
+                dict_fields['hosts_personal_data'] = str_to_bool(hosts_personal_data)
             else:
-                dict_fields.update({'hosts_personal_data': 'False'})
+                dict_fields['hosts_personal_data'] = False
 
             if asset_type == 'network':
                 dict_fields.update({"ip_range": ip})
@@ -56,6 +50,7 @@ def read_and_create_assets(args):
             except HTTPError as err:
                 errors = json.loads(err.response.content)["errors"]
                 print(f"The asset could not be added because: {errors}")
+
 
 
 def str_to_bool(s):
