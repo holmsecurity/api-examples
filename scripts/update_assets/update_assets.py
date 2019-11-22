@@ -41,15 +41,17 @@ def read_data(args):
         for row in csv_reader:
             ip = row[4]
             asset_type = get_asset_type(ip)
-            name = row[0]
             tags = row[3]
             uuid = row[1]
+            name = row[0]
             dict_fields = {
-                "name": name,
                 "uuid": uuid,
                 "type": asset_type,
                 "tags": [t for t in tags.split('|') if t]
             }
+
+            if name != '':
+                dict_fields['name'] = name
             if asset_type == 'network':
                 dict_fields.update({"ip_range": ip})
             else:
