@@ -1,9 +1,9 @@
 from unittest import TestCase
+
 import import_assets
 
 
 class TestMyUnits(TestCase):
-
     def test_str_to_bool_one(self):
         result = import_assets.str_to_bool('True')
 
@@ -50,9 +50,11 @@ class TestMyUnits(TestCase):
         with self.assertRaises(ValueError):
             import_assets.get_asset_type('')
 
-
     def test_prep_dicts_field_one(self):
-        row = ['test_three', '', 'description of asset test three', '186e0a25-e28b-4ecf-b9ad-223c8ee2a62d', 'False', '192.170.5.1/24']
+        row = [
+            'test_three', '', 'description of asset test three',
+            '186e0a25-e28b-4ecf-b9ad-223c8ee2a62d', 'False', '192.170.5.1/24'
+        ]
         results = import_assets.prep_dict_fields(row)[0]
         dict_test = {
             "name": row[0],
@@ -67,8 +69,10 @@ class TestMyUnits(TestCase):
         self.assertDictEqual(dict_test, results)
 
     def test_prep_dicts_field_two(self):
-        row = ['test_three', '', 'description of asset test three', '186e0a25-e28b-4ecf-b9ad-223c8ee2a62d', 'False',
-               '192.170.5.1']
+        row = [
+            'test_three', '', 'description of asset test three',
+            '186e0a25-e28b-4ecf-b9ad-223c8ee2a62d', 'False', '192.170.5.1'
+        ]
         results = import_assets.prep_dict_fields(row)[0]
         dict_test = {
             "name": row[0],
@@ -82,10 +86,11 @@ class TestMyUnits(TestCase):
 
         self.assertDictEqual(dict_test, results)
 
-
     def test_prep_dicts_field_three(self):
-        row = ['test_three', '', 'description of asset test three', '186e0a25-e28b-4ecf-b9ad-223c8ee2a62d', '',
-               '192.170.5.1']
+        row = [
+            'test_three', '', 'description of asset test three',
+            '186e0a25-e28b-4ecf-b9ad-223c8ee2a62d', '', '192.170.5.1'
+        ]
         results = import_assets.prep_dict_fields(row)[0]
         dict_test = {
             "name": row[0],
