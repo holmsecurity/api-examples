@@ -39,25 +39,30 @@ def read_data(args):
     with open(args.csv_path, 'r') as csv_file:
         csv_reader = csv.reader(csv_file)
         for row in csv_reader:
-            ip = row[4]
-            asset_type = get_asset_type(ip)
-            tags = row[3]
-            uuid = row[1]
-            name = row[0]
-            dict_fields = {
-                "uuid": uuid,
-                "type": asset_type,
-                "tags": [t for t in tags.split('|') if t]
-            }
-
-            if name != '':
-                dict_fields['name'] = name
-            if asset_type == 'network':
-                dict_fields.update({"ip_range": ip})
-            else:
-                dict_fields.update({"ip": ip})
-
+            dict_fields = prep_dict_fields(row)
             update_asset_request(args, dict_fields)
+
+
+def prep_dict_fields(row):
+    ip = row[4]
+    asset_type = get_asset_type(ip)
+    tags = row[3]
+    uuid = row[1]
+    name = row[0]
+
+    dict_fields = {
+        "uuid": uuid,
+        "type": asset_type,
+        "tags": [t for t in tags.split('|') if t]
+    }
+
+    if name != '':
+        dict_fields['name'] = name
+    if asset_type == 'network':
+        dict_fields.update({"ip_range": ip})
+    else:
+        dict_fields.update({"ip": ip})
+    return dict_fields
 
 
 def get_asset_type(ip_row):
@@ -67,11 +72,17 @@ def get_asset_type(ip_row):
     - host        (eg. 192.168.0.134)
     """
 
-    if "/" in ip_row:
-        asset_type = "network"
+    if not ip_row:
+        raise ValueError
+
+    if not ip_row.isalpha():
+        if "/" in ip_row:
+            asset_type = "network"
+        else:
+            asset_type = "host"
+        return asset_type
     else:
-        asset_type = "host"
-    return asset_type
+        raise ValueError
 
 
 def update_asset_request(args, dict_fields):
