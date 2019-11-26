@@ -5,25 +5,25 @@ import update_assets
 
 
 class TestMyUnits(TestCase):
-    def test_get_asset_type_one(self):
+    def test_get_asset_type_returns_network_for_ip_range(self):
         result = update_assets.get_asset_type('192.143.53/5')
 
         self.assertEqual(result, 'network')
 
-    def test_get_asset_type_two(self):
+    def test_get_asset_type_returns_host_for_ip(self):
         result = update_assets.get_asset_type('139.175.53.3')
 
         self.assertEqual(result, 'host')
 
-    def test_get_asset_type_three(self):
+    def test_get_asset_type_raises_value_error_for_incorrect_str(self):
         with self.assertRaises(ValueError):
             update_assets.get_asset_type('somestring')
 
-    def test_get_asset_type_four(self):
+    def test_get_asset_type_raises_value_error_on_empty_str(self):
         with self.assertRaises(ValueError):
             update_assets.get_asset_type('')
 
-    def test_prep_dicts_field_one(self):
+    def test_prep_dicts_field_returns_dict_with_ip_range(self):
         row = [
             'test_three', 'the_uuid_is_inserted_here', '',
             '186e0a25-e28b-4ecf-b9ad-223c8ee2a62d', '192.170.5.1/24'
@@ -39,7 +39,7 @@ class TestMyUnits(TestCase):
 
         self.assertDictEqual(dict_test, results)
 
-    def test_prep_dicts_field_two(self):
+    def test_prep_dicts_field_returns_dict_with_ip(self):
         row = [
             'test_three', 'the_uuid_is_inserted_here', '',
             '186e0a25-e28b-4ecf-b9ad-223c8ee2a62d', '192.170.5.1'
@@ -55,7 +55,7 @@ class TestMyUnits(TestCase):
 
         self.assertDictEqual(dict_test, results)
 
-    def test_get_data_one(self):
+    def test_get_data_returns_list_of_dicts_for_one_asset(self):
         list_to_test = [{
             'count':
             1,
@@ -104,7 +104,7 @@ class TestMyUnits(TestCase):
 
         self.assertListEqual(correct_output_list, results)
 
-    def test_get_data_two(self):
+    def test_get_data_returns_list_of_dicts_for_two_assets(self):
         list_to_test = [{
             'count':
             2,
