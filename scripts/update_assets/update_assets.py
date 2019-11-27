@@ -1,10 +1,12 @@
 import argparse
 import csv
+import ipaddress
 import json
 from urllib.parse import urljoin
 
 import requests
 from requests.exceptions import HTTPError
+
 DEFAULT_API_URL = 'https://se-api.holmsecurity.com/v1/'
 """
 This code takes in the modified CSV file and sends a patch request for updating the assets.
@@ -39,37 +41,45 @@ def read_data(args):
     with open(args.csv_path, 'r') as csv_file:
         csv_reader = csv.reader(csv_file)
         for row in csv_reader:
-            ip = row[4]
-            asset_type = get_asset_type(ip)
-            name = row[0]
-            tags = row[3]
-            uuid = row[1]
-            dict_fields = {
-                "name": name,
-                "uuid": uuid,
-                "type": asset_type,
-                "tags": [t for t in tags.split('|') if t]
-            }
-            if asset_type == 'network':
-                dict_fields.update({"ip_range": ip})
-            else:
-                dict_fields.update({"ip": ip})
-
+            dict_fields = prep_dict_fields(row)
             update_asset_request(args, dict_fields)
 
 
-def get_asset_type(ip_row):
-    """"
-    Check the type of the asset by the IP/IP range. We support two types of assets:
-    - network  (eg. 192.168.0.1/24)
-    - host        (eg. 192.168.0.134)
-    """
+def prep_dict_fields(row):
+    ip = row[4]
+    asset_type = get_asset_type(ip)
+    tags = row[3]
+    uuid = row[1]
+    name = row[0]
 
-    if "/" in ip_row:
-        asset_type = "network"
+    dict_fields = {
+        "uuid": uuid,
+        "type": asset_type,
+        "tags": [t for t in tags.split('|') if t]
+    }
+
+    if name != '':
+        dict_fields['name'] = name
+    if asset_type == 'network':
+        dict_fields.update({"ip_range": ip})
     else:
-        asset_type = "host"
-    return asset_type
+        dict_fields.update({"ip": ip})
+    return dict_fields
+
+
+def get_asset_type(ip):
+    try:
+        result = ipaddress.ip_network(ip, strict=False)
+        if "/32" in str(result):
+            try:
+                ipaddress.ip_address(ip)
+                return "host"
+            except:
+                pass
+        else:
+            return "network"
+    except ValueError:
+        return None
 
 
 def update_asset_request(args, dict_fields):

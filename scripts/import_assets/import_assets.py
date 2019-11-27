@@ -1,12 +1,13 @@
 import argparse
 import csv
+import ipaddress
 import json
 from urllib.parse import urljoin
+
 import requests
 from requests.exceptions import HTTPError
 
 DEFAULT_API_URL = 'https://se-api.holmsecurity.com/v1/'
-
 """
 This code importing csv files including information about assets and creates assets in the holm-api endpoint. 
 """
@@ -16,41 +17,46 @@ def read_and_create_assets(args):
     """
     Reads data from CSV file and posts it as JSON to the API.
     """
-
     with open(args.csv_path, 'r') as csv_file:
         csv_reader = csv.reader(csv_file)
         for row in csv_reader:
-            ip = row[5]
-            asset_type = get_asset_type(ip)
-            name = row[0]
-            business_impact = row[1]
-            details = row[2]
-            hosts_personal_data = row[4]
-            tags = [t for t in row[3].split('|') if t]
-            dict_fields = {
-                "name": name,
-                "type": asset_type,
-                "tags": tags,
-                "details": details or None,
-                "business_impact": business_impact or 'neutral'
-            }
-
-            if hosts_personal_data != '':
-                dict_fields['hosts_personal_data'] = str_to_bool(hosts_personal_data)
-            else:
-                dict_fields['hosts_personal_data'] = False
-
-            if asset_type == 'network':
-                dict_fields.update({"ip_range": ip})
-            else:
-                dict_fields.update({"ip": ip})
+            dict_fields, ip = prep_dict_fields(row)
             try:
                 post_asset_request(args, dict_fields)
-                print(f"{name} with the ip {ip} was added successfully")
+                print(
+                    f"{dict_fields['name']} with the ip {ip} was added successfully"
+                )
             except HTTPError as err:
                 errors = json.loads(err.response.content)["errors"]
                 print(f"The asset could not be added because: {errors}")
 
+
+def prep_dict_fields(row):
+    ip = row[5]
+    asset_type = get_asset_type(ip)
+    name = row[0]
+    business_impact = row[1]
+    details = row[2]
+    hosts_personal_data = row[4]
+    tags = [t for t in row[3].split('|') if t]
+    dict_fields = {
+        "name": name,
+        "type": asset_type,
+        "tags": tags,
+        "details": details or None,
+        "business_impact": business_impact or 'neutral'
+    }
+    if hosts_personal_data != '':
+        dict_fields['hosts_personal_data'] = str_to_bool(hosts_personal_data)
+    else:
+        dict_fields['hosts_personal_data'] = False
+
+    if asset_type == 'network':
+        dict_fields.update({"ip_range": ip})
+    else:
+        dict_fields.update({"ip": ip})
+
+    return dict_fields, ip
 
 
 def str_to_bool(s):
@@ -62,18 +68,19 @@ def str_to_bool(s):
         raise ValueError
 
 
-def get_asset_type(ip_row):
-    """"
-    Check the type of the asset by the IP/IP range. We support two types of assets:
-    - network  (eg. 192.168.0.1/24)
-    - host        (eg. 192.168.0.134)
-    """
-
-    if "/" in ip_row:
-        asset_type = "network"
-    else:
-        asset_type = "host"
-    return asset_type
+def get_asset_type(ip):
+    try:
+        result = ipaddress.ip_network(ip, strict=False)
+        if "/32" in str(result):
+            try:
+                ipaddress.ip_address(ip)
+                return "host"
+            except:
+                pass
+        else:
+            return "network"
+    except ValueError:
+        return None
 
 
 def post_asset_request(args, dict_fields):

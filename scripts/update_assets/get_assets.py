@@ -4,6 +4,7 @@ from urllib.parse import urljoin
 
 import requests
 from requests.exceptions import HTTPError
+
 DEFAULT_API_URL = 'https://se-api.holmsecurity.com/v1/'
 
 
