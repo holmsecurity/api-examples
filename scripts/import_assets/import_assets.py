@@ -1,12 +1,13 @@
 import argparse
 import csv
+import ipaddress
 import json
 from urllib.parse import urljoin
+
 import requests
 from requests.exceptions import HTTPError
 
 DEFAULT_API_URL = 'https://se-api.holmsecurity.com/v1/'
-
 """
 This code importing csv files including information about assets and creates assets in the holm-api endpoint. 
 """
@@ -22,7 +23,9 @@ def read_and_create_assets(args):
             dict_fields, ip = prep_dict_fields(row)
             try:
                 post_asset_request(args, dict_fields)
-                print(f"{dict_fields['name']} with the ip {ip} was added successfully")
+                print(
+                    f"{dict_fields['name']} with the ip {ip} was added successfully"
+                )
             except HTTPError as err:
                 errors = json.loads(err.response.content)["errors"]
                 print(f"The asset could not be added because: {errors}")
@@ -65,24 +68,19 @@ def str_to_bool(s):
         raise ValueError
 
 
-def get_asset_type(ip_row):
-    """"
-    Check the type of the asset by the IP/IP range. We support two types of assets:
-    - network  (eg. 192.168.0.1/24)
-    - host        (eg. 192.168.0.134)
-    """
-
-    if not ip_row:
-        raise ValueError
-
-    if not ip_row.isalpha():
-        if "/" in ip_row:
-            asset_type = "network"
+def get_asset_type(ip):
+    try:
+        result = ipaddress.ip_network(ip, strict=False)
+        if "/32" in str(result):
+            try:
+                ipaddress.ip_address(ip)
+                return "host"
+            except:
+                pass
         else:
-            asset_type = "host"
-        return asset_type
-    else:
-        raise ValueError
+            return "network"
+    except ValueError:
+        return None
 
 
 def post_asset_request(args, dict_fields):

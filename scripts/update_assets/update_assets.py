@@ -1,10 +1,12 @@
 import argparse
 import csv
+import ipaddress
 import json
 from urllib.parse import urljoin
 
 import requests
 from requests.exceptions import HTTPError
+
 DEFAULT_API_URL = 'https://se-api.holmsecurity.com/v1/'
 """
 This code takes in the modified CSV file and sends a patch request for updating the assets.
@@ -65,24 +67,19 @@ def prep_dict_fields(row):
     return dict_fields
 
 
-def get_asset_type(ip_row):
-    """"
-    Check the type of the asset by the IP/IP range. We support two types of assets:
-    - network  (eg. 192.168.0.1/24)
-    - host        (eg. 192.168.0.134)
-    """
-
-    if not ip_row:
-        raise ValueError
-
-    if not ip_row.isalpha():
-        if "/" in ip_row:
-            asset_type = "network"
+def get_asset_type(ip):
+    try:
+        result = ipaddress.ip_network(ip, strict=False)
+        if "/32" in str(result):
+            try:
+                ipaddress.ip_address(ip)
+                return "host"
+            except:
+                pass
         else:
-            asset_type = "host"
-        return asset_type
-    else:
-        raise ValueError
+            return "network"
+    except ValueError:
+        return None
 
 
 def update_asset_request(args, dict_fields):

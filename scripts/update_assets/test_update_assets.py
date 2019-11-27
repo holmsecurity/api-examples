@@ -6,7 +6,7 @@ import update_assets
 
 class TestMyUnits(TestCase):
     def test_get_asset_type_returns_network_for_ip_range(self):
-        result = update_assets.get_asset_type('192.143.53/5')
+        result = update_assets.get_asset_type('192.143.53.0/24')
 
         self.assertEqual(result, 'network')
 
@@ -15,13 +15,25 @@ class TestMyUnits(TestCase):
 
         self.assertEqual(result, 'host')
 
-    def test_get_asset_type_raises_value_error_for_incorrect_str(self):
-        with self.assertRaises(ValueError):
-            update_assets.get_asset_type('somestring')
+    def test_get_asset_type_raises_value_error_for_alpha_str(self):
+        result = update_assets.get_asset_type('somestring')
+
+        self.assertEqual(result, None)
+
+    def test_get_asset_type_raises_value_error_for_slashes(self):
+        result = update_assets.get_asset_type('/0123/')
+
+        self.assertEqual(result, None)
+
+    def test_get_asset_type_raises_value_error_for_wrong_numbers(self):
+        result = update_assets.get_asset_type('195.14.124.13.4')
+
+        self.assertEqual(result, None)
 
     def test_get_asset_type_raises_value_error_on_empty_str(self):
-        with self.assertRaises(ValueError):
-            update_assets.get_asset_type('')
+        result = update_assets.get_asset_type('')
+
+        self.assertEqual(result, None)
 
     def test_prep_dicts_field_returns_dict_with_ip_range(self):
         row = [

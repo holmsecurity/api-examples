@@ -33,7 +33,7 @@ class TestMyUnits(TestCase):
             import_assets.str_to_bool('')
 
     def test_get_asset_type_should_return_network_for_ip_range(self):
-        result = import_assets.get_asset_type('192.143.53/5')
+        result = import_assets.get_asset_type('192.143.53.4/24')
 
         self.assertEqual(result, 'network')
 
@@ -43,12 +43,14 @@ class TestMyUnits(TestCase):
         self.assertEqual(result, 'host')
 
     def test_get_asset_type_should_raise_value_error_on_incorrect_input(self):
-        with self.assertRaises(ValueError):
-            import_assets.get_asset_type('somestring')
+        result = import_assets.get_asset_type('somestring')
+
+        self.assertEqual(result, None)
 
     def test_get_asset_type_raise_value_error_on_empty_str(self):
-        with self.assertRaises(ValueError):
-            import_assets.get_asset_type('')
+        result = import_assets.get_asset_type('')
+
+        self.assertEqual(result, None)
 
     def test_prep_dicts_field_returns_dict_with_ip_range(self):
         row = [
