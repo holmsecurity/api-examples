@@ -2,6 +2,25 @@
 
 Version 1.0
 
+## About
+
+This Splunk App let's you lookup the number of vulnerabilities per severity for a network asset using its IP (IPv4/IPv6) directly inside of Splunk. The lookup is done against Holm Security VMP using its REST API to retrieve information about the asset.
+The app works both for SaaS and On-Premise installations from Holm Security.
+
+**Example use case:**
+
+To get more context about an network asset and understand what the security risk is on it. Use the search lookup command to get enhanced information about it using this app that integrates with Holme Security. 
+
+
+**Severity levels:**
+
+
+- Critical
+- High
+- Medium
+- Low
+- Info
+
 ## Prerequisites
 
 This guide assumes that the splunk app package (tar.gz) is available for you and that you have access to install apps on your Splunk instance as well as editing the files provisioned by the Splunk app inside of the apps directory.
