@@ -31,7 +31,7 @@ In the search field: | holm asset_ip=x.x.x.x
 
 ## TODO
 
-[] Configuration supported through the Splunk UI
-[] Make it a certified Splunk app
+- Configuration supported through the Splunk UI
+- Make it a certified Splunk app
 
 Copyright 2020 - Holm Security AB
