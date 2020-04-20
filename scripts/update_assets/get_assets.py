@@ -42,7 +42,7 @@ def get_asset_request(args, offset=0):
 
 
 def make_request(args, offset):
-    url = urljoin(args.url, f'net-scans/assets?offset={offset}')
+    url = urljoin(args.url, f'net-assets?offset={offset}')
     headers = {"Authorization": f"TOKEN {args.key_token}"}
     response = requests.get(url=url, headers=headers)
     try:

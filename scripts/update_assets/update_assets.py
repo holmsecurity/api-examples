@@ -89,7 +89,7 @@ def update_asset_request(args, dict_fields):
 
     uuid = dict_fields['uuid']
     json_data_new = json.dumps(dict_fields)
-    url = urljoin(args.url, f'net-scans/assets/{uuid}')
+    url = urljoin(args.url, f'net-assets/{uuid}')
     headers = {
         "Authorization": f"TOKEN {args.key_token}",
         "Content-Type": "application/json"

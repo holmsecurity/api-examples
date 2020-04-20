@@ -12,7 +12,7 @@ Note: In this example we are using the Sweden, Stockholm data-center as REST API
 ## Get Network assets
 Those are targets of your scan. List them as follows:
 ```
-$  http https://se-api.holmsecurity.com/v1/net-scans/assets "Authorization:Token {token}"
+$  http https://se-api.holmsecurity.com/v2/net-assets "Authorization:Token {token}"
 HTTP/1.1 200 OK
 
 {
@@ -40,7 +40,7 @@ Where `{token}` is API token generated in your Security Center account.
 ## Get Network scan profiles
 Configuration of the scan:
 ```
-$  http https://se-api.holmsecurity.com/v1/net-scans/scan-profiles "Authorization:Token {token}"
+$  http https://se-api.holmsecurity.com/v2/net-scans/scan-profiles "Authorization:Token {token}"
 HTTP/1.1 200 OK
 
 [
@@ -60,7 +60,7 @@ HTTP/1.1 200 OK
 The [network_scan.json](examples/network_scan.json) contains an example payload that will initiate a simple Network scan using an asset and scan profile that was listed above.
 
 ```
-$  http POST https://se-api.holmsecurity.com/v1/net-scans "Authorization:Token {token}" @examples/network_scan.json
+$  http POST https://se-api.holmsecurity.com/v2/net-scans "Authorization:Token {token}" @examples/network_scan.json
 HTTP/1.1 201 Created
 
 {

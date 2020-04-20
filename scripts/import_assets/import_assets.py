@@ -84,7 +84,7 @@ def get_asset_type(ip):
 
 
 def post_asset_request(args, dict_fields):
-    url = urljoin(args.url, 'net-scans/assets')
+    url = urljoin(args.url, 'net-assets')
     json_data = json.dumps(dict_fields)
     headers = {
         "Authorization": f"TOKEN {args.key_token}",
