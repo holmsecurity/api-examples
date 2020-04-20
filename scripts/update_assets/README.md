@@ -24,7 +24,7 @@ For instance:
 ```
 test,22c5e448-0fa0-45de-bf68-396e85c365bb,host,28229346-c605-4944-a0c7-820d7d80a9cc,192.141.24.2
 ```
-* URL to the end point (https://se-api.holmsecurity.com/v1/ by default). (optional)
+* URL to the end point (https://se-api.holmsecurity.com/v2/ by default). (optional)
 
 ## What to edit?
 * Tags uuids are editable, however one can choose among the static tags, some of them could for instance be: 

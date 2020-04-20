@@ -7,7 +7,7 @@ from urllib.parse import urljoin
 import requests
 from requests.exceptions import HTTPError
 
-DEFAULT_API_URL = 'https://se-api.holmsecurity.com/v1/'
+DEFAULT_API_URL = 'https://se-api.holmsecurity.com/v2/'
 """
 This code importing csv files including information about assets and creates assets in the holm-api endpoint. 
 """

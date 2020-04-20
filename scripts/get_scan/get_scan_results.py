@@ -16,7 +16,7 @@ from utils import (filter_scans_on_time_period,
 """
 This file gives some examples/use cases of how to use the JSON REST API provided by HOLM SECURITY.
 
-API URL: https://se-api.holmsecurity.com/v1
+API URL: https://se-api.holmsecurity.com/v2
 API documentation: https://se-api.holmsecurity.com/docs/
 
 KNOWN LIMITATIONS:
@@ -45,7 +45,7 @@ Parameters:
 
 """
 
-DEFAULT_API_URL = 'https://se-api.holmsecurity.com/v1'
+DEFAULT_API_URL = 'https://se-api.holmsecurity.com/v2'
 
 
 class ScanKind(enum.Enum):
