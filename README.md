@@ -153,3 +153,9 @@ optional arguments:
 
 ```
 
+## Holm Security APP for Qradar
+
+We have build an app for holmsecurity in Qradar. The first version is basic for the current demand. The use provides the api token and base url. The app will then pull data about network_assets and classify them based on severity. Sets will be created for different severities and the sets will be then populated with ips. The user is able to see the response, if anything goes wrong. It will be shown there.
+
+
+
