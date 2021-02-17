@@ -25,7 +25,6 @@ You also need to enable the api and create a token in Holm Security. The token a
 
 Download and Install Qradar app editor.  
 
-- Save holm.py
 
 ## Use the app
 
