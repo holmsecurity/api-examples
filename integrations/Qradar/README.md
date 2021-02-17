@@ -4,7 +4,7 @@ Version 1.0
 
 ## About
 
-We have build an app for holmsecurity in Qradar.The use provides the api token and base url. The app will then pull data about network_assets and classify them based on severity. Sets will be created for different severities and the sets will be then populated with ips. The user is able to see the response, if anything goes wrong. It will be shown there.
+The app will pull data about network_assets and classify them based on severity. Sets will be created for different severities and the sets will be then populated with ips in Qradar. The user is able to see the response, if anything goes wrong. It will be shown there.
 
 
 **Severity levels:**
@@ -19,6 +19,7 @@ We have build an app for holmsecurity in Qradar.The use provides the api token a
 ## Prerequisites
 
 This guide assumes that the Qradar instance up and running. You also need to download Qradar app editor.
+You also need to enable the api and create a token in Holm Security. The token and base url are used for establishing the integration.
 
 ## Install
 
