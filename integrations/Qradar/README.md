@@ -23,16 +23,24 @@ You also need to enable the api and create a token in Holm Security. The token a
 
 ## Install
 
-Download and Install Qradar app editor.  
-
+- Download and Install Qradar app editor.  
+- Upload the app using the .zip
 
 ## Use the app
 
 Select use existing apps then upload the zipped app file. For more information, see https://support.holmsecurity.com/hc/en-us/articles/360020403959-How-do-I-integrate-with-IBM-Qradar-
 
+## Troubleshooting 
+
+- Review Chrome dev tools when setting up integration in QRadar web UI to identify calls with errors (such as 500 internal server error)
+- Review the App logs on the QRadar instance. How to do this: https://www.ibm.com/support/pages/qradar-review-logs-applications-errors and https://www.ibm.com/docs/en/qradar-common?topic=2-app-logs
+- Review App framework versions and any potential incompatibility with newer versions of QRadar: https://www.ibm.com/docs/en/qradar-common?topic=framework-qradar-app-version-2
+
 ## TODO
 
-- Build version 2.0 with enhanced functionality
-- Make it a certified Qradar app
+- Regular polling of data (currently ad-hoc only)
+- Certified Qradar app
 
-Copyright 2020 - Holm Security AB
+## Copyright
+
+Copyright 2021 - Holm Security AB
